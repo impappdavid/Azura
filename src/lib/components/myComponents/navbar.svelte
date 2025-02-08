@@ -22,7 +22,7 @@
         >
 
         <a
-            href="../"
+            href="../../azurox"
             class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
             >AZUROX</a
         >

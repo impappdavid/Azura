@@ -1,10 +1,10 @@
 <script>
-    import def1 from "$lib/imgs/def1.jpg";
-    import def3 from "$lib/imgs/def3.jpg";
-    import def4 from "$lib/imgs/def4.jpg";
+    import def1 from "$lib/imgs/s1-0.jpg";
+    import def3 from "$lib/imgs/s1-1.jpg";
+    import def4 from "$lib/imgs/s1-2.jpg";
 </script>
 
-<div class="text-4xl font-logo">Season 1</div>
+<div class="text-4xl font-body">Season 1</div>
 <div class="grid grid-cols-3 gap-4">
     <div
         class="relative w-full max-w-md overflow-hidden rounded-2xl cursor-pointer group bg-zinc-900 p-2 flex flex-col gap-2"
@@ -19,7 +19,7 @@
 
         <div class="flex flex-col gap-2">
             <div class="flex justify-between items-center">
-                <div class="font-logo text-3xl text-white">Sylas</div>
+                <div class="font-logo text-3xl text-white">Kai</div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="26"
@@ -89,7 +89,7 @@
 
         <div class="flex flex-col gap-2">
             <div class="flex justify-between items-center">
-                <div class="font-logo text-3xl text-white">Elara</div>
+                <div class="font-logo text-3xl text-white">Lena</div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="26"
@@ -159,7 +159,7 @@
 
         <div class="flex flex-col gap-2">
             <div class="flex justify-between items-center">
-                <div class="font-logo text-3xl text-white">Aziel</div>
+                <div class="font-logo text-3xl text-white">Noah</div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="26"
