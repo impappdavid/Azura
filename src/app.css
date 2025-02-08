@@ -77,3 +77,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+*::-webkit-scrollbar {
+  width: 0px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {           /* roundness of the scroll thumb */
+  border: 3px solid rgb(24 24 27);  /* creates padding around scroll thumb */
+}
