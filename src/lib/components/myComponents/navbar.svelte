@@ -86,25 +86,7 @@
                         >
                         Twitter
                     </a>
-                    <a
-                        href="#"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="28.45"
-                            height="20"
-                            viewBox="0 0 256 180"
-                            ><path
-                                fill="#f00"
-                                d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"
-                            /><path
-                                fill="#fff"
-                                d="m102.421 128.06l66.328-38.418l-66.328-38.418z"
-                            /></svg
-                        >
-                        YouTube
-                    </a>
+                    
                 </div>
                 <div class=" bg-white flex flex-col drop-shadow-md rounded-md">
                     <div
@@ -135,35 +117,17 @@
                         >
                         Twitter
                     </a>
-                    <a
-                        href="#"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="28.45"
-                            height="20"
-                            viewBox="0 0 256 180"
-                            ><path
-                                fill="#f00"
-                                d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"
-                            /><path
-                                fill="#fff"
-                                d="m102.421 128.06l66.328-38.418l-66.328-38.418z"
-                            /></svg
-                        >
-                        YouTube
-                    </a>
+                   
                 </div>
             </HoverCard.Content>
         </HoverCard.Root>
         <a
-            href="../"
+            href="../../market"
             class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
             >MARKET</a
         >
         <a
-            href="../"
+            href="../generate"
             class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
             >GENERATE</a
         >
