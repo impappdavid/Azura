@@ -27,6 +27,12 @@
             >AZUROX</a
         >
 
+        <a
+            href="../../"
+            class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
+            >TWITTER</a
+        >
+
         <HoverCard.Root
             bind:open={isSocialsOpen}
             class="group"
@@ -39,7 +45,7 @@
                     ? 'bg-white/90 text-black'
                     : 'hover:bg-white/90 hover:text-black text-white'}"
             >
-                SOCIALS
+                MARKET
                 <svg
                     class={`inline-block transition-transform duration-300 ease-in-out transform ${isSocialsOpen ? "rotate-180" : "group-hover:rotate-180"}`}
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,40 +67,98 @@
                 class="w-64 flex flex-col gap-1 p-0.5 bg-[#eaebe5]"
             >
                 <div class=" bg-white flex flex-col drop-shadow-md rounded-md">
-                    <div
-                        class="flex justify-between items-center py-1 px-1 rounded-md border-b"
-                    >
-                        <div class="text-xs font-body text-zinc-600">AZURA</div>
-                    </div>
                     <a
-                        href="#"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center"
+                        href="../../market/fixbuy"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-dollar"
                             ><path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
                                 fill="none"
-                                stroke="#040404"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1.5"
-                                d="m3 21l7.548-7.548M21 3l-7.548 7.548m0 0L8 3H3l7.548 10.452m2.904-2.904L21 21h-5l-5.452-7.548"
-                                color="#040404"
+                            /><path
+                                d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                            /><path d="M13 17h-7v-14h-2" /><path
+                                d="M6 5l14 1l-.575 4.022m-4.925 2.978h-8.5"
+                            /><path
+                                d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"
+                            /><path d="M19 21v1m0 -8v1" /></svg
+                        >
+                        FIX BUY
+                    </a>
+
+                    <a
+                        href="../../market/auction"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center font-semibold"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-question"
+                            ><path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            /><path
+                                d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                            /><path d="M13.5 17h-7.5v-14h-2" /><path
+                                d="M6 5l14 1l-.714 5m-4.786 2h-8.5"
+                            /><path d="M19 22v.01" /><path
+                                d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483"
                             /></svg
                         >
-                        Twitter
+                        AUCTION
+                    </a>
+
+                    <a
+                        href="../../market/invest"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center font-semibold"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-discount"
+                            ><path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            /><path
+                                d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                            /><path d="M12.5 17h-6.5v-14h-2" /><path
+                                d="M6 5l14 1l-.859 6.011m-6.141 .989h-7"
+                            /><path d="M16 21l5 -5" /><path
+                                d="M21 21v.01"
+                            /><path d="M16 16v.01" /></svg
+                        >
+                        INVEST
                     </a>
                 </div>
             </HoverCard.Content>
         </HoverCard.Root>
-        <a
-            href="../../market"
-            class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
-            >MARKET</a
-        >
         <a
             href="../generate"
             class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
@@ -174,35 +238,117 @@
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
                         <div class="text-2xl font-bold">ABOUT</div>
-                        
                     </a>
                     <a
                         href="../../azurox"
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
                         <div class="text-2xl font-bold">AZUROX</div>
-                        
                     </a>
                     <a
                         href="../"
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
                         <div class="text-2xl font-bold">SOCIALS</div>
-                        
                     </a>
                     <a
-                        href="../../market"
+                        href="#"
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
                         <div class="text-2xl font-bold">MARKET</div>
-                        
+                    </a>
+                    <a
+                        href="../../market/fixbuy"
+                        class=" text-black pl-12 pr-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">FIX BUY</div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-dollar"
+                            ><path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            /><path
+                                d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                            /><path d="M13 17h-7v-14h-2" /><path
+                                d="M6 5l14 1l-.575 4.022m-4.925 2.978h-8.5"
+                            /><path
+                                d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"
+                            /><path d="M19 21v1m0 -8v1" /></svg
+                        >
+                    </a>
+                    <a
+                        href="../../market/auction"
+                        class=" text-black pl-12 pr-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">AUCTION</div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-question"
+                            ><path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            /><path
+                                d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                            /><path d="M13.5 17h-7.5v-14h-2" /><path
+                                d="M6 5l14 1l-.714 5m-4.786 2h-8.5"
+                            /><path d="M19 22v.01" /><path
+                                d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483"
+                            /></svg
+                        >
+                    </a>
+                    <a
+                        href="../../market/invest"
+                        class=" text-black pl-12 pr-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">INVEST</div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-discount"
+                            ><path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            /><path
+                                d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                            /><path d="M12.5 17h-6.5v-14h-2" /><path
+                                d="M6 5l14 1l-.859 6.011m-6.141 .989h-7"
+                            /><path d="M16 21l5 -5" /><path
+                                d="M21 21v.01"
+                            /><path d="M16 16v.01" /></svg
+                        >
                     </a>
                     <a
                         href="../../generate"
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
                         <div class="text-2xl font-bold">GENERATE</div>
-                        
                     </a>
                 </div>
             </Sheet.Content>

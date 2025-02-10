@@ -13,7 +13,7 @@
 <TabsPrimitive.Trigger
 	bind:ref
 	class={cn(
-		"ring-offset-background data-[state=active]:border-b data-[state=active]:text-white inline-flex items-center justify-center whitespace-nowrap px-2 py-1 text-md  transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow",
+		"outline-none data-[state=active]:border-b data-[state=active]:text-white inline-flex items-center justify-center whitespace-nowrap px-2 py-1 text-md  transition-all focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow",
 		className
 	)}
 	{value}
