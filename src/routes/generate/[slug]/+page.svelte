@@ -8,6 +8,8 @@
     import { Input } from "$lib/components/ui/input/index.js";
     import Button from "$lib/components/ui/button/button.svelte";
 
+    import { page } from '$app/stores';
+
     const rarity = [
         { value: "common", label: "Common", left: 5000 },
         { value: "uncommon", label: "Uncommon", left: 2500 },
@@ -21,6 +23,20 @@
     const triggerContent = $derived(
         rarity.find((f) => f.value === value)?.label ?? "Choose rarity",
     );
+
+    const pageUrl = $page.params.slug;
+    let imageUrl;
+
+    if(pageUrl == "kai"){
+        imageUrl = def3;
+    }else if(pageUrl == "lena"){
+        imageUrl = def1;
+    }else if(pageUrl == "noah"){
+        imageUrl = def4;
+    }
+
+
+    
 </script>
 
 <div class="bg-zinc-900 h-screen w-full flex justify-center items-center">
@@ -35,14 +51,22 @@
 
     <div class="absolute inset-0 flex items-center justify-center">
         <div
-            class="bg-zinc-900/90 backdrop-blur-md p-2 rounded-2xl shadow-lg text-center w-full h-fit max-w-6xl grid grid-cols-2 gap-4"
+            class="bg-zinc-900/90 backdrop-blur-md p-2 rounded-2xl shadow-lg text-center w-full h-fit max-w-6xl grid sm:grid-cols-2 gap-4"
         >
             <div class="w-full h-fit">
-                <img src={def1} alt="def1" class="h-fit w-full rounded-xl" />
+                <img src={imageUrl} alt="def1" class="sm:h-fit w-full rounded-xl" />
             </div>
             <div class="w-full flex flex-col gap-4 items-start justify-between">
                 <div class="font-logo text-white text-5xl flex items-end text-start gap-1">
-                    Lena <div class="font-body text-sm">#5238</div>
+                    {#if pageUrl == "lena"}
+                        Lena 
+                    {:else if pageUrl == "noah"}
+                        Noah          
+                    {:else if pageUrl == "kai"}   
+                        Kai          
+                    {:else}
+                        We dont find this character
+                    {/if}
                 </div>
                 <div class="flex flex-col gap-4 items-start w-full justify-start h-full">
                     <div class="flex flex-col w-full">
@@ -205,3 +229,4 @@
         </div>
     </div>
 </div>
+

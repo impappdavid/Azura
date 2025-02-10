@@ -5,7 +5,7 @@
 </script>
 
 <div class="text-4xl font-body">Season 1</div>
-<div class="grid grid-cols-3 gap-4">
+<div class="grid sm:grid-cols-3 gap-4 sm:px-0 px-4">
     <div
         class="relative w-full max-w-md overflow-hidden rounded-2xl cursor-pointer group bg-zinc-900 p-2 flex flex-col gap-2"
     >

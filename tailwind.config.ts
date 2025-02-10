@@ -68,7 +68,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				body: ['Inconsolata'],
+				body: ['Poppins'],
 				logo: ['Freckle Face']
 			},
 			keyframes: {

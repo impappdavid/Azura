@@ -2,7 +2,7 @@
     import cover from "$lib/imgs/bg3.png";
 </script>
 
-<div class="w-full max-w-4xl bg-zinc-900 h-fit grid grid-cols-2 gap-8 p-8">
+<div class="w-full max-w-4xl bg-zinc-900 h-fit grid sm:grid-cols-2 gap-8 p-4 sm:p-8">
     <div class="flex flex-col gap-6">
         <div class="text-4xl text-white font-body">
             Building the future of NFT
