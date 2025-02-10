@@ -206,20 +206,20 @@
                     class="w-5 h-5 bg-gradient-to-br from-zinc-100 to-red-400 rounded-full"
                 ></div>
                 <div class="flex flex-col">
-                    <div class="text-xs font-body">0xab...b259</div>
+                    <div class="text-xs font-body text-black">0xab...b259</div>
                 </div>
             </div>
             <div class="flex gap-1 items-center">
-                <div class="font-body font-medium">Kai</div>
+                <div class="font-body font-medium text-black">Kai</div>
                 <div class="font-body text-xs text-zinc-600">#{sale.tokenId}</div>
             </div>
             <div class="flex justify-between">
                 <div class="flex flex-col gap-0 text-start">
                     <div class="text-[10px] text-zinc-600 font-body">
-                        Current bid
+                        Invest price
                     </div>
                     <div class="text-xs text-black font-body">
-                        0.56 <span class="text-xs text-zinc-600">SOL</span>
+                        0.25 <span class="text-xs text-zinc-600">SOL</span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-0 text-end">
@@ -232,7 +232,7 @@
         </div>
         <div class="h-fit rounded-b-xl">
             <Button
-                class="h-8 bg-[#ab9ff2] hover:bg-[#9587e0] rounded-b-xl rounded-t-none w-full"
+                class="h-8 bg-[#ab9ff2] hover:bg-[#9587e0] rounded-b-xl rounded-t-none w-full text-white"
                 >Invest now</Button
             >
         </div>

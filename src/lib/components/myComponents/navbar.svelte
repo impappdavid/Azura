@@ -68,8 +68,8 @@
             >
                 <div class=" bg-white flex flex-col drop-shadow-md rounded-md">
                     <a
-                        href="../../market/fixbuy"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center font-semibold"
+                        href="../../market/buy"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:opacity-80 transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -94,12 +94,12 @@
                                 d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"
                             /><path d="M19 21v1m0 -8v1" /></svg
                         >
-                        FIX BUY
+                        BUY
                     </a>
 
                     <a
                         href="../../market/auction"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center font-semibold"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:opacity-80 transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@
 
                     <a
                         href="../../market/invest"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body hover:opacity-80 transition-all ease-in-out border-b items-center font-semibold"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:opacity-80 transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -258,10 +258,10 @@
                         <div class="text-2xl font-bold">MARKET</div>
                     </a>
                     <a
-                        href="../../market/fixbuy"
+                        href="../../market/buy"
                         class=" text-black pl-12 pr-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
-                        <div class="text-2xl font-bold">FIX BUY</div>
+                        <div class="text-2xl font-bold">BUY</div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"

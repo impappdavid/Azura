@@ -205,12 +205,12 @@
         <div class="flex text-start gap-1 items-center">
             <div class="w-7 h-7 bg-gradient-to-br from-zinc-100 to-red-400 rounded-full"></div>
             <div class="flex flex-col">
-                <div class="text-xs font-body">0xab...b259</div>
-                <div class="text-[10px] font-body text-zinc-500">286 likes</div>
+                <div class="text-xs font-body text-black">0xab...b259</div>
+                <div class="text-[10px] font-body text-zinc-600">286 likes</div>
             </div>
         </div>
         <div class="flex items-center">
-            <Button class="h-8 px-4 rounded-lg">bid</Button>
+            <Button class="h-8 px-4 rounded-lg bg-white border drop-shadow-md hover:bg-zinc-200 border-zinc-200 text-black">bid</Button>
         </div>
     </div>
     

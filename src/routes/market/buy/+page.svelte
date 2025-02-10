@@ -13,6 +13,7 @@
     import FixBuyCard from "$lib/components/myComponents/market/fixBuyCard.svelte";
     import AuctionCard from "$lib/components/myComponents/market/auctionCard.svelte";
     import InvestmentCard from "$lib/components/myComponents/market/investmentCard.svelte";
+    import Toolbar from "$lib/components/myComponents/market/toolbar.svelte";
 
   const rarity = [
     { value: "lowtohigh", label: "Price: low to high" },
@@ -206,63 +207,16 @@
     rarity.find((f) => f.value === value)?.label ?? "Sort by",
   );
 </script>
-
-<div class="bg-zinc-900 h-screen w-full flex justify-center items-center">
+<div class="bg-zinc-900 overflow-y-scroll w-full flex justify-center items-center">
   <Navbar />
  
 
-  <div class="absolute inset-0 flex items-center justify-center p-2 pt-16">
+  <div class="absolute inset-0 flex items-center justify-center p-2 pt-16 bg-zinc-900">
     <div
-      class="bg-zinc-900/90 backdrop-blur-md h-full rounded-2xl shadow-lg text-center w-full flex flex-col gap-4"
+      class="h-full rounded-2xl shadow-lg text-center w-full flex flex-col gap-4"
     >
-      <div class="w-full p-2 px-4 rounded-t-2xl flex gap-2 bg-zinc-900">
-        <Button
-          size="icon"
-          class="border border-zinc-800 hover:bg-zinc-800 w-20"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 48 48"
-            ><defs
-              ><mask id="ipTFilter0"
-                ><path
-                  fill="#555555"
-                  stroke="#fff"
-                  stroke-linejoin="round"
-                  stroke-width="4"
-                  d="m6 9l14.4 16.818v12.626L27.6 42V25.818L42 9z"
-                /></mask
-              ></defs
-            ><path
-              fill="#df2623cc"
-              d="M0 0h48v48H0z"
-              mask="url(#ipTFilter0)"
-            /></svg
-          >
-        </Button>
-
-       
-
-        <Input type="text" placeholder="Search for a NFT" class="text-xs" />
-
-        <Select.Root type="single" name="favoriteFruit" bind:value>
-          <Select.Trigger
-            class="w-[220px] hover:bg-zinc-800 transition-all text-white text-xs"
-          >
-            {triggerContent}
-          </Select.Trigger>
-          <Select.Content>
-            <Select.Group>
-              {#each rarity as rare}
-                <Select.Item value={rare.value} label={rare.label} />
-              {/each}
-            </Select.Group>
-          </Select.Content>
-        </Select.Root>
-      </div>
-      <div class="w-full h-fit py-1 overflow-y-scroll rounded-b-2xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-10 gap-3 px-4 justify-start items-start">
+      <Toolbar />
+      <div class="w-full h-fit py-1 rounded-b-2xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-3 px-4 justify-start items-start">
         <FixBuyCard data={data}/>
         
       </div>

@@ -133,7 +133,7 @@ import Button from "$lib/components/ui/button/button.svelte";
 
 <Dialog.Root>
     <Dialog.Trigger class="outline-none ">
-        <Button class="h-8 px-4 rounded-lg">buy</Button>
+        <Button class="h-8 px-4 rounded-lg bg-black text-white hover:bg-black/90">buy</Button>
     </Dialog.Trigger>
     <Dialog.Content>
         <Dialog.Header>

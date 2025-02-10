@@ -2,218 +2,92 @@
     import def1 from "$lib/imgs/s1-0.jpg";
     import def3 from "$lib/imgs/s1-1.jpg";
     import def4 from "$lib/imgs/s1-2.jpg";
+    import OwnedCard from "../market/ownedCard.svelte";
 </script>
 
-<div class="text-4xl font-body">Season 1</div>
+<div class="text-4xl font-body text-black font-bold">Season 1</div>
 <div class="grid sm:grid-cols-3 gap-4 sm:px-0 px-4">
     <div
-        class="relative w-full max-w-md overflow-hidden rounded-2xl cursor-pointer group bg-zinc-900 p-2 flex flex-col gap-2"
+        class="h-full max-h-[460px] w-full max-w-[380px] transition-all duration-300 ease-in-out relative rounded-xl cursor-pointer group"
     >
-        <div class="overflow-hidden rounded-xl">
+        <div class="relative overflow-hidden rounded-xl h-[420px]">
             <img
                 src={def3}
-                alt="def3"
-                class="w-full h-auto rounded-md object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                alt="def1"
+                class="h-full w-full object-cover transition-all duration-300 ease-in-out rounded-xl group-hover:scale-110"
             />
         </div>
-
-        <div class="flex flex-col gap-2">
-            <div class="flex justify-between items-center">
-                <div class="font-logo text-3xl text-white">Kai</div>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                    ><g fill="none"
-                        ><path
-                            fill="url(#tokenBrandedSolana0)"
-                            d="M18.413 7.902a.62.62 0 0 1-.411.163H3.58c-.512 0-.77-.585-.416-.928l2.369-2.284a.6.6 0 0 1 .41-.169H20.42c.517 0 .77.59.41.935z"
-                        /><path
-                            fill="url(#tokenBrandedSolana1)"
-                            d="M18.413 19.158a.62.62 0 0 1-.411.158H3.58c-.512 0-.77-.58-.416-.923l2.369-2.29a.6.6 0 0 1 .41-.163H20.42c.517 0 .77.586.41.928z"
-                        /><path
-                            fill="url(#tokenBrandedSolana2)"
-                            d="M18.413 10.473a.62.62 0 0 0-.411-.158H3.58c-.512 0-.77.58-.416.923l2.369 2.29c.111.103.257.16.41.163H20.42c.517 0 .77-.586.41-.928z"
-                        /><defs
-                            ><linearGradient
-                                id="tokenBrandedSolana0"
-                                x1="3.001"
-                                x2="21.459"
-                                y1="55.041"
-                                y2="54.871"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#599db0" /><stop
-                                    offset="1"
-                                    stop-color="#47f8c3"
-                                /></linearGradient
-                            ><linearGradient
-                                id="tokenBrandedSolana1"
-                                x1="3.001"
-                                x2="21.341"
-                                y1="9.168"
-                                y2="9.027"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#c44fe2" /><stop
-                                    offset="1"
-                                    stop-color="#73b0d0"
-                                /></linearGradient
-                            ><linearGradient
-                                id="tokenBrandedSolana2"
-                                x1="4.036"
-                                x2="20.303"
-                                y1="12.003"
-                                y2="12.003"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#778cbf" /><stop
-                                    offset="1"
-                                    stop-color="#5dcdc9"
-                                /></linearGradient
-                            ></defs
-                        ></g
-                    ></svg
-                >
+        <div class="mt-2 absolute bottom-2 left-2 flex flex-col gap-1">
+            <div class="font-logo text-start text-white text-3xl">Kai</div>
+            <div
+                class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 flex gap-1 items-center"
+            >
+                <div
+                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                ></div>
+                <div class="text-xs text-zinc-200 font-logo pr-1">AZURA</div>
             </div>
         </div>
+        <div
+            class="mt-2 absolute top-0 right-2 bg-white/30 backdrop-blur-sm rounded-lg p-1 px-2 flex gap-1 items-center"
+        >
+            <div class="text-xs text-zinc-200">Default</div>
+        </div>
     </div>
+
     <div
-        class="relative w-full max-w-md overflow-hidden rounded-2xl cursor-pointer group bg-[#df2623cc] p-2 flex flex-col gap-2"
+        class="h-full max-h-[460px] w-full max-w-[380px] transition-all duration-300 ease-in-out relative rounded-xl cursor-pointer group"
     >
-        <div class="overflow-hidden rounded-xl">
+        <div class="relative overflow-hidden rounded-xl h-[420px]">
             <img
                 src={def1}
                 alt="def1"
-                class="w-full h-auto rounded-md object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                class="h-full w-full object-cover transition-all duration-300 ease-in-out rounded-xl group-hover:scale-110"
             />
         </div>
-
-        <div class="flex flex-col gap-2">
-            <div class="flex justify-between items-center">
-                <div class="font-logo text-3xl text-white">Lena</div>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                    ><g fill="none"
-                        ><path
-                            fill="url(#tokenBrandedSolana0)"
-                            d="M18.413 7.902a.62.62 0 0 1-.411.163H3.58c-.512 0-.77-.585-.416-.928l2.369-2.284a.6.6 0 0 1 .41-.169H20.42c.517 0 .77.59.41.935z"
-                        /><path
-                            fill="url(#tokenBrandedSolana1)"
-                            d="M18.413 19.158a.62.62 0 0 1-.411.158H3.58c-.512 0-.77-.58-.416-.923l2.369-2.29a.6.6 0 0 1 .41-.163H20.42c.517 0 .77.586.41.928z"
-                        /><path
-                            fill="url(#tokenBrandedSolana2)"
-                            d="M18.413 10.473a.62.62 0 0 0-.411-.158H3.58c-.512 0-.77.58-.416.923l2.369 2.29c.111.103.257.16.41.163H20.42c.517 0 .77-.586.41-.928z"
-                        /><defs
-                            ><linearGradient
-                                id="tokenBrandedSolana0"
-                                x1="3.001"
-                                x2="21.459"
-                                y1="55.041"
-                                y2="54.871"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#599db0" /><stop
-                                    offset="1"
-                                    stop-color="#47f8c3"
-                                /></linearGradient
-                            ><linearGradient
-                                id="tokenBrandedSolana1"
-                                x1="3.001"
-                                x2="21.341"
-                                y1="9.168"
-                                y2="9.027"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#c44fe2" /><stop
-                                    offset="1"
-                                    stop-color="#73b0d0"
-                                /></linearGradient
-                            ><linearGradient
-                                id="tokenBrandedSolana2"
-                                x1="4.036"
-                                x2="20.303"
-                                y1="12.003"
-                                y2="12.003"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#778cbf" /><stop
-                                    offset="1"
-                                    stop-color="#5dcdc9"
-                                /></linearGradient
-                            ></defs
-                        ></g
-                    ></svg
-                >
+        <div class="mt-2 absolute bottom-2 left-2 flex flex-col gap-1">
+            <div class="font-logo text-start text-white text-3xl">Lena</div>
+            <div
+                class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 flex gap-1 items-center"
+            >
+                <div
+                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                ></div>
+                <div class="text-xs text-zinc-200 font-logo pr-1">AZURA</div>
             </div>
+        </div>
+        <div
+            class="mt-2 absolute top-0 right-2 bg-white/30 backdrop-blur-sm rounded-lg p-1 px-2 flex gap-1 items-center"
+        >
+            <div class="text-xs text-zinc-200">Default</div>
         </div>
     </div>
+
     <div
-        class="relative w-full max-w-md overflow-hidden rounded-2xl cursor-pointer group bg-zinc-900 p-2 flex flex-col gap-2"
+        class="h-full max-h-[460px] w-full max-w-[380px] transition-all duration-300 ease-in-out relative rounded-xl cursor-pointer group"
     >
-        <div class="overflow-hidden rounded-xl">
+        <div class="relative overflow-hidden rounded-xl h-[420px]">
             <img
                 src={def4}
-                alt="def4"
-                class="w-full h-auto rounded-md object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                alt="def1"
+                class="h-full w-full object-cover transition-all duration-300 ease-in-out rounded-xl group-hover:scale-110"
             />
         </div>
-
-        <div class="flex flex-col gap-2">
-            <div class="flex justify-between items-center">
-                <div class="font-logo text-3xl text-white">Noah</div>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                    ><g fill="none"
-                        ><path
-                            fill="url(#tokenBrandedSolana0)"
-                            d="M18.413 7.902a.62.62 0 0 1-.411.163H3.58c-.512 0-.77-.585-.416-.928l2.369-2.284a.6.6 0 0 1 .41-.169H20.42c.517 0 .77.59.41.935z"
-                        /><path
-                            fill="url(#tokenBrandedSolana1)"
-                            d="M18.413 19.158a.62.62 0 0 1-.411.158H3.58c-.512 0-.77-.58-.416-.923l2.369-2.29a.6.6 0 0 1 .41-.163H20.42c.517 0 .77.586.41.928z"
-                        /><path
-                            fill="url(#tokenBrandedSolana2)"
-                            d="M18.413 10.473a.62.62 0 0 0-.411-.158H3.58c-.512 0-.77.58-.416.923l2.369 2.29c.111.103.257.16.41.163H20.42c.517 0 .77-.586.41-.928z"
-                        /><defs
-                            ><linearGradient
-                                id="tokenBrandedSolana0"
-                                x1="3.001"
-                                x2="21.459"
-                                y1="55.041"
-                                y2="54.871"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#599db0" /><stop
-                                    offset="1"
-                                    stop-color="#47f8c3"
-                                /></linearGradient
-                            ><linearGradient
-                                id="tokenBrandedSolana1"
-                                x1="3.001"
-                                x2="21.341"
-                                y1="9.168"
-                                y2="9.027"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#c44fe2" /><stop
-                                    offset="1"
-                                    stop-color="#73b0d0"
-                                /></linearGradient
-                            ><linearGradient
-                                id="tokenBrandedSolana2"
-                                x1="4.036"
-                                x2="20.303"
-                                y1="12.003"
-                                y2="12.003"
-                                gradientUnits="userSpaceOnUse"
-                                ><stop stop-color="#778cbf" /><stop
-                                    offset="1"
-                                    stop-color="#5dcdc9"
-                                /></linearGradient
-                            ></defs
-                        ></g
-                    ></svg
-                >
+        <div class="mt-2 absolute bottom-2 left-2 flex flex-col gap-1">
+            <div class="font-logo text-start text-white text-3xl">Noah</div>
+            <div
+                class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 flex gap-1 items-center"
+            >
+                <div
+                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                ></div>
+                <div class="text-xs text-zinc-200 font-logo pr-1">AZURA</div>
             </div>
+        </div>
+        <div
+            class="mt-2 absolute top-0 right-2 bg-white/30 backdrop-blur-sm rounded-lg p-1 px-2 flex gap-1 items-center"
+        >
+            <div class="text-xs text-zinc-200">Default</div>
         </div>
     </div>
 </div>
