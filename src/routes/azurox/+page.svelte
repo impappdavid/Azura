@@ -9,7 +9,7 @@
 
 <div class="bg-zinc-900 h-screen">
     <Navbar />
-    <section class="h-full max-h-screen grid grid-cols-4 ">
+    <section class="h-full max-h-screen hidden sm:grid sm:grid-cols-4 ">
         <div class="group h-full w-full p-2 flex flex-col overflow-hidden cursor-pointer">
             <div class="h-full transition-all duration-500 ease-in-out group-hover:h-[94%]">
                 <img src={def1} alt="def1" class="h-full w-full object-cover transition-all duration-500 ease-in-out filter grayscale group-hover:grayscale-0" />
@@ -39,6 +39,38 @@
                     <h3 class="text-5xl text-white font-bold font-logo">Noah</h3>
                 </div>
             </div>
+        </div>
+        <div class="h-full w-full">
+        </div>
+      
+    </section>
+    <section class="h-full max-h-screen  sm:hidden flex flex-col ">
+        <div class="group h-full w-full p-2 flex flex-col overflow-hidden cursor-pointer">
+            <div class="h-full transition-all duration-500 ease-in-out  relative">
+                <img src={def1} alt="def1" class="h-full w-full object-cover transition-all duration-500 ease-in-out " />
+                <div class="mt-2 absolute bottom-0 left-0 bg-zinc-900 p-2 px-4">
+                    <h3 class="text-5xl text-white font-bold font-logo">Lena</h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="group h-full w-full p-2 flex flex-col overflow-hidden cursor-pointer">
+            <div class="h-full transition-all duration-500 ease-in-out relative">
+                <img src={def3} alt="def1" class="h-full w-full object-cover transition-all duration-500 ease-in-out " />
+                <div class="mt-2 absolute bottom-0 left-0 bg-zinc-900 p-2 px-4">
+                    <h3 class="text-5xl text-white font-bold font-logo">Kai</h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="group h-full w-full p-2 flex flex-col overflow-hidden cursor-pointer">
+            <div class="h-full relative">
+                <img src={def4} alt="def1" class="h-full w-full object-cover transition-all duration-500 ease-in-out " />
+                <div class="mt-2 absolute bottom-0 left-0 bg-zinc-900 p-2 px-4">
+                    <h3 class="text-5xl text-white font-bold font-logo">Noah</h3>
+                </div>
+            </div>
+            
         </div>
         <div class="h-full w-full">
         </div>

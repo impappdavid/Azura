@@ -38,7 +38,7 @@
             class="bg-zinc-900/90 backdrop-blur-md p-2 rounded-2xl shadow-lg text-center w-full h-fit max-w-6xl flex flex-col gap-4"
         >
             <div class="w-full text-center text-2xl text-white font-body">Choose a character</div>
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <a href="/generate/kai"
                     class="relative w-full max-w-md overflow-hidden rounded-2xl cursor-pointer group bg-zinc-900 border border-zinc-800 p-2 flex flex-col gap-2"
                 >
