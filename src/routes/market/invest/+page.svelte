@@ -212,7 +212,7 @@
     <Navbar />
     
   
-    <div class="absolute inset-0 flex items-center justify-center  pt-16">
+    <div class="absolute inset-0 flex items-center justify-center p-2 pt-16">
       <div
         class="bg-zinc-900/90 backdrop-blur-md h-full rounded-2xl shadow-lg text-center w-full flex flex-col gap-4"
       >

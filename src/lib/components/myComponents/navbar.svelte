@@ -10,13 +10,13 @@
     <div class="flex items-center w-full max-w-36">
         <a
             href="../"
-            class="bg-[#df2623] hover:bg-[#df2623cc] px-2 py-0.5 font-bold text-white text-lg rounded-md transition-all font-logo"
+            class="bg-[#ab9ff2] hover:bg-[#9587e0] px-2 py-0.5 font-bold text-white text-lg rounded-md transition-all font-logo"
             >AZURA</a
         >
     </div>
     <div class=" items-center sm:flex hidden">
         <a
-            href="../"
+            href="../../about"
             class="font-medium tracking-wide font-body text-sm px-3 hover:bg-white/90 hover:text-black text-white py-1.5 rounded-full transition-all"
             >ABOUT</a
         >
@@ -64,12 +64,12 @@
                 </svg>
             </HoverCard.Trigger>
             <HoverCard.Content
-                class="w-64 flex flex-col gap-1 p-0.5 bg-[#eaebe5]"
+                class="w-64 flex flex-col gap-1 p-0.5 bg-[#eaebe5] border-white"
             >
                 <div class=" bg-white flex flex-col drop-shadow-md rounded-md">
                     <a
                         href="../../market/buy"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:opacity-80 transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
+                        class="py-2 px-1 rounded-t-md flex gap-3 font-body text-black hover:text-[#ab9ff2] transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@
 
                     <a
                         href="../../market/auction"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:opacity-80 transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
+                        class="py-2 px-1  flex gap-3 font-body text-black hover:text-[#ab9ff2] transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@
 
                     <a
                         href="../../market/invest"
-                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:opacity-80 transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
+                        class="py-2 px-1 rounded-md flex gap-3 font-body text-black hover:text-[#ab9ff2] transition-all ease-in-out border-b border-zinc-400 items-center font-semibold"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@
                         ><div class="flex items-center w-full max-w-36">
                             <a
                                 href="../"
-                                class="bg-[#df2623] hover:bg-[#df2623cc] px-2 py-0.5 font-bold text-white text-lg rounded-md transition-all font-logo"
+                                class="bg-[#ab9ff2] hover:bg-[#9587e0] px-2 py-0.5 font-bold text-white text-lg rounded-md transition-all font-logo"
                                 >AZURA</a
                             >
                         </div></Sheet.Title

@@ -18,10 +18,35 @@
         { value: "legendary", label: "Legendary", left: 50 },
     ];
 
+    const type = [
+        {valueType: "investment", label: "Investment"},
+        {valueType: "normal", label:"Normal"}
+    ];
+
+    const investmentRarity = [
+        { iValue: "common", label: "Common", left: 500 },
+        { iValue: "uncommon", label: "Uncommon", left: 250 },
+        { iValue: "rare", label: "Rare", left: 100 },
+        { iValue: "epic", label: "Epic", left: 50 },
+        { iValue: "legendary", label: "Legendary", left: 5 },
+    ];
+
     let value = $state("");
 
     const triggerContent = $derived(
         rarity.find((f) => f.value === value)?.label ?? "Choose rarity",
+    );
+
+    let valueType = $state("");
+
+    const triggerContentType = $derived(
+        type.find((f) => f.valueType === valueType)?.label ?? "Choose type",
+    );
+
+    let iValue = $state("");
+
+    const triggerContentInvest = $derived(
+        investmentRarity.find((f) => f.iValue === iValue)?.label ?? "Choose Rarity",
     );
 
     const pageUrl = $page.params.slug;
@@ -51,12 +76,12 @@
 
     <div class="absolute inset-0 flex items-center justify-center">
         <div
-            class="bg-zinc-900/90 backdrop-blur-md p-2 rounded-2xl shadow-lg text-center w-full h-fit max-w-6xl grid sm:grid-cols-2 gap-4"
+            class="bg-zinc-900/90 backdrop-blur-md p-2 rounded-2xl shadow-lg text-center w-full h-fit max-w-6xl grid sm:grid-cols-2 gap-4 max-h-[700px] overflow-y-scroll"
         >
             <div class="w-full h-fit">
                 <img src={imageUrl} alt="def1" class="sm:h-fit w-full rounded-xl" />
             </div>
-            <div class="w-full flex flex-col gap-4 items-start justify-between">
+            <div class="w-full flex flex-col gap-2 items-start justify-between">
                 <div class="font-logo text-white text-5xl flex items-end text-start gap-1">
                     {#if pageUrl == "lena"}
                         Lena 
@@ -68,7 +93,32 @@
                         We dont find this character
                     {/if}
                 </div>
-                <div class="flex flex-col gap-4 items-start w-full justify-start h-full">
+                <div class="flex flex-col gap-4 items-start w-full justify-start h-full ">
+                    <div class="flex flex-col w-full">
+                        <div class="font-body text-sm text-zinc-300 text-start">
+                            Type
+                        </div>
+                        <Select.Root
+                            type="single"
+                            name="choosetype"
+                            bind:value={valueType}
+                        >
+                            <Select.Trigger class="w-full text-white">
+                                {triggerContentType}
+                            </Select.Trigger>
+                            <Select.Content>
+                                <Select.Group>
+                                    {#each type as isInvestment}
+                                        <Select.Item
+                                            value={isInvestment.valueType}
+                                            label={`${isInvestment.label}`}
+                                        />
+                                    {/each}
+                                </Select.Group>
+                            </Select.Content>
+                        </Select.Root>
+                    </div>
+                    {#if valueType == "normal"}
                     <div class="flex flex-col w-full">
                         <div class="font-body text-sm text-zinc-300 text-start">
                             Rarity
@@ -93,7 +143,33 @@
                             </Select.Content>
                         </Select.Root>
                     </div>
-                    {#if value}
+                    {:else}
+                    <div class="flex flex-col w-full">
+                        <div class="font-body text-sm text-zinc-300 text-start">
+                            Investment rarity
+                        </div>
+                        <Select.Root
+                            type="single"
+                            name="favoriteFruit"
+                            bind:value={iValue}
+                        >
+                            <Select.Trigger class="w-full text-white">
+                                {triggerContentInvest}
+                            </Select.Trigger>
+                            <Select.Content>
+                                <Select.Group>
+                                    {#each investmentRarity as iValue}
+                                        <Select.Item
+                                            value={iValue.iValue}
+                                            label={`${iValue.label} (${iValue.left})`}
+                                        />
+                                    {/each}
+                                </Select.Group>
+                            </Select.Content>
+                        </Select.Root>
+                    </div>
+                    {/if}
+                    {#if value || iValue}
                     <div class="flex flex-col w-full">
                         <div class="font-body text-sm text-zinc-300 text-start">
                             Background
@@ -105,7 +181,7 @@
                         />
                     </div>
                     {/if}
-                    {#if value == "uncommon" || value === "rare" || value == "epic" || value == "legendary"}
+                    {#if value || iValue == "uncommon" || value|| iValue === "rare" || value|| iValue == "epic" || value|| iValue == "legendary"}
                         <div class="flex flex-col w-full">
                             <div
                                 class="font-body text-sm text-zinc-300 text-start"
@@ -119,7 +195,7 @@
                             />
                         </div>
                     {/if}
-                    {#if value === "rare" || value == "epic" || value == "legendary"}
+                    {#if value || iValue === "rare" || value || iValue == "epic" || value || iValue == "legendary"}
                         <div class="flex flex-col w-full">
                             <div
                                 class="font-body text-sm text-zinc-300 text-start"
@@ -133,7 +209,7 @@
                             />
                         </div>
                     {/if}
-                    {#if value === "legendary"}
+                    {#if value || iValue === "legendary"}
                         <div class="flex flex-col w-full">
                             <div
                                 class="font-body text-sm text-zinc-300 text-start"
@@ -153,19 +229,34 @@
                 </div>
                 <div class="flex flex-col gap-2 w-full">
                     <Button
-                        class="w-full bg-[#9587e0] font-body rounded-lg hover:bg-[#9487e0b4] flex"
+                        class="w-full bg-[#9587e0] font-body rounded-lg hover:bg-[#9487e0b4] flex text-white"
                     >
-                        Mint for {value == "common"
-                            ? 0.05
-                            : value == "uncommon"
-                              ? 0.1
-                              : value == "rare"
-                                ? 0.25
-                                : value == "epic"
-                                  ? 0.5
-                                  : value == "legendary"
-                                    ? 1
-                                    : "null"}
+                    {#if value}
+                    Mint for {value == "common"
+                    ? 0.05
+                    : value == "uncommon"
+                      ? 0.1
+                      : value == "rare"
+                        ? 0.25
+                        : value == "epic"
+                          ? 0.5
+                          : value == "legendary"
+                            ? 1
+                            : "null"}
+                            {:else}
+                            Mint for {iValue == "common"
+                    ? 0.125
+                    : iValue == "uncommon"
+                      ? 0.25
+                      : iValue == "rare"
+                        ? 0.5
+                        : iValue == "epic"
+                          ? 1.25
+                          : iValue == "legendary"
+                            ? 2.5
+                            : "null"}
+                    {/if}
+                        
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"

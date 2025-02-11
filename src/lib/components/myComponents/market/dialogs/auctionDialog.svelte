@@ -1,8 +1,9 @@
 <script>
-import Button from "$lib/components/ui/button/button.svelte";
+    import Button from "$lib/components/ui/button/button.svelte";
     import * as Dialog from "$lib/components/ui/dialog";
     import * as Tabs from "$lib/components/ui/tabs";
     import * as Table from "$lib/components/ui/table";
+    import Input from "$lib/components/ui/input/input.svelte";
 
     const nftdata = [
         {
@@ -133,7 +134,10 @@ import Button from "$lib/components/ui/button/button.svelte";
 
 <Dialog.Root>
     <Dialog.Trigger class="outline-none ">
-        <Button class="h-8 px-4 rounded-lg bg-[#ab9ff2] text-white hover:bg-[#9587e0]">buy</Button>
+        <Button
+            class="h-8 px-4 rounded-lg bg-[#ab9ff2] hover:bg-[#9587e0] border-zinc-200 text-white"
+            >bid</Button
+        >
     </Dialog.Trigger>
     <Dialog.Content>
         <Dialog.Header>
@@ -148,21 +152,15 @@ import Button from "$lib/components/ui/button/button.svelte";
                     <Tabs.List
                         class="flex w-full justify-start border-b border-zinc-800 text-md font-body"
                     >
-                        <Tabs.Trigger value="overview"
-                            >Overview</Tabs.Trigger
-                        >
-                        
-                        <Tabs.Trigger value="activity"
-                            >Activity</Tabs.Trigger
-                        >
+                        <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
+                        <Tabs.Trigger value="offers">Offers</Tabs.Trigger>
+                        <Tabs.Trigger value="activity">Activity</Tabs.Trigger>
                     </Tabs.List>
                     <Tabs.Content
                         value="overview"
                         class="max-h-[500px] overflow-y-scroll"
                     >
-                        <div
-                            class="grid sm:grid-cols-2 w-full py-2 gap-4"
-                        >
+                        <div class="grid sm:grid-cols-2 w-full py-2 gap-4">
                             <div
                                 class="w-full h-fit flex flex-col gap-4 col-span-2 sm:col-span-1"
                             >
@@ -181,16 +179,13 @@ import Button from "$lib/components/ui/button/button.svelte";
                                     <div
                                         class=" flex text-zinc-300 justify-between items-center"
                                     >
-                                        <div
-                                            class="text-lg font-body"
-                                        >
-                                            Price
+                                        <div class="text-lg font-body">
+                                            Current bid
                                         </div>
                                         <div
                                             class="px-2 py-1 bg-black rounded-full font-body"
                                         >
-                                            <span
-                                                class="text-xs text-zinc-400"
+                                            <span class="text-xs text-zinc-400"
                                                 >Owned by:</span
                                             >
                                             0xab...b259
@@ -200,21 +195,24 @@ import Button from "$lib/components/ui/button/button.svelte";
                                         class="flex gap-1 text-white items-center text-lg font-body"
                                     >
                                         {data.price}
-                                        <span
-                                            class="text-zinc-400 text-sm"
+                                        <span class="text-zinc-400 text-sm"
                                             >SOL</span
                                         >
-                                        <div
-                                            class="text-sm text-zinc-400"
-                                        >
-                                            | ${data.price *
-                                                200}
+                                        <div class="text-sm text-zinc-400">
+                                            | ${data.price * 200}
                                         </div>
                                     </div>
-                                    <Button
-                                        class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body"
-                                        >Buy</Button
-                                    >
+                                    <div class="flex flex-col gap-2">
+                                        <Input
+                                            type="number"
+                                            placeholder="Place a bid"
+                                            class="w-full text-sm text-white"
+                                        />
+                                        <Button
+                                            class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body"
+                                            >Bid</Button
+                                        >
+                                    </div>
                                 </div>
 
                                 <div
@@ -223,17 +221,12 @@ import Button from "$lib/components/ui/button/button.svelte";
                                     <div
                                         class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
                                     >
-                                        <div
-                                            class="text-zinc-400 text-sm"
-                                        >
+                                        <div class="text-zinc-400 text-sm">
                                             List price
                                         </div>
-                                        <div
-                                            class="text-white text-sm"
-                                        >
+                                        <div class="text-white text-sm">
                                             {data.price}
-                                            <span
-                                                class="text-zinc-400"
+                                            <span class="text-zinc-400"
                                                 >SOL</span
                                             >
                                         </div>
@@ -241,16 +234,11 @@ import Button from "$lib/components/ui/button/button.svelte";
                                     <div
                                         class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
                                     >
-                                        <div
-                                            class="text-zinc-400 text-sm"
-                                        >
+                                        <div class="text-zinc-400 text-sm">
                                             Floor price
                                         </div>
-                                        <div
-                                            class="text-white text-sm"
-                                        >
-                                            0.49 <span
-                                                class="text-zinc-400"
+                                        <div class="text-white text-sm">
+                                            0.49 <span class="text-zinc-400"
                                                 >SOL</span
                                             >
                                         </div>
@@ -259,16 +247,11 @@ import Button from "$lib/components/ui/button/button.svelte";
                                     <div
                                         class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
                                     >
-                                        <div
-                                            class="text-zinc-400 text-sm"
-                                        >
+                                        <div class="text-zinc-400 text-sm">
                                             Floor diff.
                                         </div>
-                                        <div
-                                            class="text-white text-sm"
-                                        >
-                                            5000 <span
-                                                class="text-zinc-400"
+                                        <div class="text-white text-sm">
+                                            5000 <span class="text-zinc-400"
                                                 >%</span
                                             >
                                         </div>
@@ -276,16 +259,11 @@ import Button from "$lib/components/ui/button/button.svelte";
                                     <div
                                         class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
                                     >
-                                        <div
-                                            class="text-zinc-400 text-sm"
-                                        >
+                                        <div class="text-zinc-400 text-sm">
                                             Top offer
                                         </div>
-                                        <div
-                                            class="text-white text-sm"
-                                        >
-                                            1.8 <span
-                                                class="text-zinc-400"
+                                        <div class="text-white text-sm">
+                                            1.8 <span class="text-zinc-400"
                                                 >SOL</span
                                             >
                                         </div>
@@ -293,81 +271,47 @@ import Button from "$lib/components/ui/button/button.svelte";
                                 </div>
                             </div>
                             <div class="col-span-2">
-                                <div
-                                    class="text-white text-lg font-body"
-                                >
+                                <div class="text-white text-lg font-body">
                                     Prompt
                                 </div>
                                 <div
                                     class="bg-zinc-950/80 p-2 rounded-lg flex flex-col gap-2 font-body"
                                 >
                                     <div class="">
-                                        <div class="text-sm">
-                                            Background
-                                        </div>
+                                        <div class="text-sm">Background</div>
                                         <div
                                             class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md"
                                         >
                                             <div
                                                 class="text-xs text-zinc-400 px-2"
                                             >
-                                                A sprawling
-                                                futuristic
-                                                metropolis at
-                                                dusk,
-                                                illuminated by
-                                                neon lights and
-                                                towering
-                                                skyscrapers made
-                                                of glass and
-                                                steel. The
-                                                streets are
-                                                alive with a mix
-                                                of people,
-                                                autonomous
-                                                vehicles, and
-                                                digital
-                                                billboards
-                                                flashing
-                                                advertisements
-                                                in multiple
-                                                languages.
-                                                Elevated
-                                                highways
-                                                crisscross
-                                                above, while a
-                                                high-speed
-                                                monorail glides
-                                                between the
-                                                buildings. The
-                                                city skyline is
-                                                a blend of
-                                                cutting-edge
-                                                architecture and
-                                                lush rooftop
-                                                gardens, with
-                                                drones hovering
-                                                in the sky
-                                                delivering
-                                                packages. A soft
-                                                glow from street
-                                                lamps reflects
-                                                off the wet
-                                                pavement,
-                                                hinting at a
-                                                recent rain
-                                                shower, as the
-                                                hum of
-                                                technology and
-                                                distant chatter
-                                                fills the air
+                                                A sprawling futuristic
+                                                metropolis at dusk, illuminated
+                                                by neon lights and towering
+                                                skyscrapers made of glass and
+                                                steel. The streets are alive
+                                                with a mix of people, autonomous
+                                                vehicles, and digital billboards
+                                                flashing advertisements in
+                                                multiple languages. Elevated
+                                                highways crisscross above, while
+                                                a high-speed monorail glides
+                                                between the buildings. The city
+                                                skyline is a blend of
+                                                cutting-edge architecture and
+                                                lush rooftop gardens, with
+                                                drones hovering in the sky
+                                                delivering packages. A soft glow
+                                                from street lamps reflects off
+                                                the wet pavement, hinting at a
+                                                recent rain shower, as the hum
+                                                of technology and distant
+                                                chatter fills the air
                                             </div>
                                         </div>
                                     </div>
                                     <div class="">
-                                        <div
-                                            class="text-sm font-body"
-                                        >
+                                        <div class="text-sm font-body">
                                             Outfit
                                         </div>
                                         <div
@@ -376,56 +320,28 @@ import Button from "$lib/components/ui/button/button.svelte";
                                             <div
                                                 class="text-xs text-zinc-400 px-2"
                                             >
-                                                A sprawling
-                                                futuristic
-                                                metropolis at
-                                                dusk,
-                                                illuminated by
-                                                neon lights and
-                                                towering
-                                                skyscrapers made
-                                                of glass and
-                                                steel. The
-                                                streets are
-                                                alive with a mix
-                                                of people,
-                                                autonomous
-                                                vehicles, and
-                                                digital
-                                                billboards
-                                                flashing
-                                                advertisements
-                                                in multiple
-                                                languages.
-                                                Elevated
-                                                highways
-                                                crisscross
-                                                above, while a
-                                                high-speed
-                                                monorail glides
-                                                between the
-                                                buildings. The
-                                                city skyline is
-                                                a blend of
-                                                cutting-edge
-                                                architecture and
-                                                lush rooftop
-                                                gardens, with
-                                                drones hovering
-                                                in the sky
-                                                delivering
-                                                packages. A soft
-                                                glow from street
-                                                lamps reflects
-                                                off the wet
-                                                pavement,
-                                                hinting at a
-                                                recent rain
-                                                shower, as the
-                                                hum of
-                                                technology and
-                                                distant chatter
-                                                fills the air
+                                                A sprawling futuristic
+                                                metropolis at dusk, illuminated
+                                                by neon lights and towering
+                                                skyscrapers made of glass and
+                                                steel. The streets are alive
+                                                with a mix of people, autonomous
+                                                vehicles, and digital billboards
+                                                flashing advertisements in
+                                                multiple languages. Elevated
+                                                highways crisscross above, while
+                                                a high-speed monorail glides
+                                                between the buildings. The city
+                                                skyline is a blend of
+                                                cutting-edge architecture and
+                                                lush rooftop gardens, with
+                                                drones hovering in the sky
+                                                delivering packages. A soft glow
+                                                from street lamps reflects off
+                                                the wet pavement, hinting at a
+                                                recent rain shower, as the hum
+                                                of technology and distant
+                                                chatter fills the air
                                             </div>
                                         </div>
                                     </div>
@@ -433,34 +349,70 @@ import Button from "$lib/components/ui/button/button.svelte";
                             </div>
                         </div>
                     </Tabs.Content>
-                    
+                    <Tabs.Content
+                        value="offers"
+                        class="max-h-[500px] overflow-y-scroll"
+                    >
+                        <Table.Root>
+                            <Table.Caption
+                                >A list of your recent offers.</Table.Caption
+                            >
+                            <Table.Header class="bg-zinc-800 hover:bg-zinc-800">
+                                <Table.Row>
+                                    <Table.Head class="w-[100px]"
+                                        >Price</Table.Head
+                                    >
+                                    <Table.Head>From</Table.Head>
+                                    <Table.Head>Updated</Table.Head>
+                                    <Table.Head class="text-right"
+                                        >Expires in</Table.Head
+                                    >
+                                </Table.Row>
+                            </Table.Header>
+                            <Table.Body>
+                                {#each nftdata as nft, i (i)}
+                                    <Table.Row>
+                                        <Table.Cell
+                                            class="font-medium text-white"
+                                            >{nft.price}
+                                            <span class="text-zinc-400 text-xs"
+                                                >SOL</span
+                                            ></Table.Cell
+                                        >
+                                        <Table.Cell
+                                            class="text-zinc-400 text-xs"
+                                            >{nft.from}</Table.Cell
+                                        >
+                                        <Table.Cell
+                                            class="text-zinc-400 text-xs"
+                                            >{nft.updated}</Table.Cell
+                                        >
+                                        <Table.Cell
+                                            class="text-right text-zinc-400 text-xs"
+                                            >{nft.expiresin}</Table.Cell
+                                        >
+                                    </Table.Row>
+                                {/each}
+                            </Table.Body>
+                        </Table.Root>
+                    </Tabs.Content>
                     <Tabs.Content
                         value="activity"
                         class="h-[500px] overflow-y-scroll"
                     >
                         <Table.Root>
                             <Table.Caption
-                                >A list of your recent
-                                activities.</Table.Caption
+                                >A list of your recent activities.</Table.Caption
                             >
-                            <Table.Header
-                                class="bg-zinc-800 hover:bg-zinc-800"
-                            >
+                            <Table.Header class="bg-zinc-800 hover:bg-zinc-800">
                                 <Table.Row>
-                                    <Table.Head
-                                        class="w-[100px]"
+                                    <Table.Head class="w-[100px]"
                                         >Type</Table.Head
                                     >
-                                    <Table.Head>Date</Table.Head
-                                    >
-                                    <Table.Head
-                                        >Seller</Table.Head
-                                    >
-                                    <Table.Head
-                                        >Buyer</Table.Head
-                                    >
-                                    <Table.Head
-                                        class="text-right"
+                                    <Table.Head>Date</Table.Head>
+                                    <Table.Head>Seller</Table.Head>
+                                    <Table.Head>Buyer</Table.Head>
+                                    <Table.Head class="text-right"
                                         >Price</Table.Head
                                     >
                                 </Table.Row>
@@ -468,9 +420,7 @@ import Button from "$lib/components/ui/button/button.svelte";
                             <Table.Body>
                                 {#each activity as active, i (i)}
                                     <Table.Row>
-                                        <Table.Cell
-                                            class="font-body"
-                                        >
+                                        <Table.Cell class="font-body">
                                             {#if active.type == "mint"}
                                                 <div
                                                     class="py-0.5 px-2 rounded-md bg-[#9587e0] w-fit text-white text-xs flex items-center"
@@ -506,8 +456,7 @@ import Button from "$lib/components/ui/button/button.svelte";
                                         <Table.Cell
                                             class="text-right text-white font-body"
                                             >{active.price}
-                                            <span
-                                                class="text-zinc-400 text-xs"
+                                            <span class="text-zinc-400 text-xs"
                                                 >SOL</span
                                             ></Table.Cell
                                         >

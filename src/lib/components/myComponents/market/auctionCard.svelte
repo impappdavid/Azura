@@ -4,6 +4,7 @@
     import * as Tabs from "$lib/components/ui/tabs";
     import * as Table from "$lib/components/ui/table";
     import FixbuyDialog from "./dialogs/fixbuyDialog.svelte";
+    import AuctionDialog from "./dialogs/auctionDialog.svelte";
 
     const nftdata = [
         {
@@ -203,14 +204,14 @@
 
     <div class="h-fit bg-white rounded-b-xl flex justify-between px-2 py-2">
         <div class="flex text-start gap-1 items-center">
-            <div class="w-7 h-7 bg-gradient-to-br from-zinc-100 to-red-400 rounded-full"></div>
+            <div class="w-7 h-7 bg-gradient-to-br from-zinc-50 to-indigo-400 rounded-full"></div>
             <div class="flex flex-col">
                 <div class="text-xs font-body text-black">0xab...b259</div>
                 <div class="text-[10px] font-body text-zinc-600">286 likes</div>
             </div>
         </div>
         <div class="flex items-center">
-            <Button class="h-8 px-4 rounded-lg bg-white border drop-shadow-md hover:bg-zinc-200 border-zinc-200 text-black">bid</Button>
+            <AuctionDialog data={sale} />
         </div>
     </div>
     

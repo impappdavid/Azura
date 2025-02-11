@@ -23,7 +23,7 @@
                 class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 flex gap-1 items-center"
             >
                 <div
-                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-50 to-indigo-400"
                 ></div>
                 <div class="text-xs text-zinc-200 font-logo pr-1">AZURA</div>
             </div>
@@ -51,7 +51,7 @@
                 class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 flex gap-1 items-center"
             >
                 <div
-                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-50 to-indigo-400"
                 ></div>
                 <div class="text-xs text-zinc-200 font-logo pr-1">AZURA</div>
             </div>
@@ -79,7 +79,7 @@
                 class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 flex gap-1 items-center"
             >
                 <div
-                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                    class="w-5 h-5 rounded-full bg-gradient-to-br from-zinc-50 to-indigo-400"
                 ></div>
                 <div class="text-xs text-zinc-200 font-logo pr-1">AZURA</div>
             </div>

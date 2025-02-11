@@ -42,7 +42,7 @@
         <Season />
     </section>
     <section
-        class=" px-2 sm:p-4 w-full h-fit bg-[#df2623cc] flex justify-center items-center py-16"
+        class=" px-2 sm:p-4 w-full h-fit bg-[#9587e0] flex justify-center items-center py-16"
     >
        <Target />
     </section>
