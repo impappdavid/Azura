@@ -7,6 +7,7 @@
     import * as Select from "$lib/components/ui/select/index.js";
     import { Input } from "$lib/components/ui/input/index.js";
     import Button from "$lib/components/ui/button/button.svelte";
+    import auro from "$lib/imgs/goldenretriver.jpg";
 
     import { page } from '$app/stores';
 
@@ -58,6 +59,8 @@
         imageUrl = def1;
     }else if(pageUrl == "noah"){
         imageUrl = def4;
+    }else if(pageUrl == "auro"){
+        imageUrl = auro;
     }
 
 
@@ -89,6 +92,8 @@
                         Noah          
                     {:else if pageUrl == "kai"}   
                         Kai          
+                    {:else if pageUrl == "auro"}
+                        Auro
                     {:else}
                         We dont find this character
                     {/if}

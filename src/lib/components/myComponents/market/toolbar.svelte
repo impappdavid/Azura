@@ -1,5 +1,4 @@
 <script>
-    import * as Select from "$lib/components/ui/select/index.js";
     import { Input } from "$lib/components/ui/input";
     import Button from "$lib/components/ui/button/button.svelte";
     import * as ToggleGroup from "$lib/components/ui/toggle-group";
@@ -90,7 +89,9 @@
 </div>
 
 <div class="flex sm:hidden px-4">
-    <Button class="w-full bg-[#9587e0] hover:bg-[#9587e0] text-white flex gap-1 rounded-lg">
+    <Button
+        class="w-full bg-[#9587e0] hover:bg-[#9587e0] text-white flex gap-1 rounded-lg"
+    >
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

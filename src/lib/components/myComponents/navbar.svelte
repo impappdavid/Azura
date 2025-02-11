@@ -1,5 +1,4 @@
 <script>
-    import Button, { buttonVariants } from "../ui/button/button.svelte";
     import * as HoverCard from "$lib/components/ui/hover-card";
     import * as Sheet from "$lib/components/ui/sheet/index.js";
     // Separate state variables for each hover card
@@ -234,7 +233,7 @@
                         >
                     </a>
                     <a
-                        href="../"
+                        href="../../about"
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
                         <div class="text-2xl font-bold">ABOUT</div>

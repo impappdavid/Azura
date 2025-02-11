@@ -1,8 +1,5 @@
 <script>
-    import Season from "$lib/components/myComponents/home/season.svelte";
-    import Target from "$lib/components/myComponents/home/target.svelte";
     import Navbar from "$lib/components/myComponents/navbar.svelte";
-    import background from "$lib/imgs/bg3.png";
     import ainft from "$lib/imgs/ainft.png";
     import invest from "$lib/imgs/invest.png";
     import characters from "$lib/imgs/characters.png";
@@ -105,6 +102,14 @@
                 </div>
                 <div class="font-body text-zinc-300">
                     In the future, we aim to work with digital artists, designers, and influencers to create exclusive NFT collections and expand our creative universe.
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="font-body text-xl font-semibold">
+                    Merging NFTs
+                </div>
+                <div class="font-body text-zinc-300">
+                    In the future, we aim to work on a feature called merge. With this you can merge NFTs to make a more rarer NFT.
                 </div>
             </div>
             <div class="flex flex-col gap-4">

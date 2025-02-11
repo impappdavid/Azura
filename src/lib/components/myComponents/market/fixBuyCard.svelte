@@ -1,8 +1,5 @@
 <script>
-    import Button from "$lib/components/ui/button/button.svelte";
-    import * as Dialog from "$lib/components/ui/dialog";
-    import * as Tabs from "$lib/components/ui/tabs";
-    import * as Table from "$lib/components/ui/table";
+    
     import FixbuyDialog from "./dialogs/fixbuyDialog.svelte";
 
     const nftdata = [
