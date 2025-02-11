@@ -248,7 +248,7 @@
                         href="../"
                         class=" text-black px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
                     >
-                        <div class="text-2xl font-bold">SOCIALS</div>
+                        <div class="text-2xl font-bold">TWITTER</div>
                     </a>
                     <a
                         href="#"
