@@ -3,6 +3,7 @@
   import def1 from "$lib/imgs/s1-0.jpg";
   import def3 from "$lib/imgs/s1-1.jpg";
   import def4 from "$lib/imgs/s1-2.jpg";
+  import auro from "$lib/imgs/goldenretriver.jpg";
   import FixBuyCard from "$lib/components/myComponents/market/fixBuyCard.svelte";
   import Toolbar from "$lib/components/myComponents/market/toolbar.svelte";
 
@@ -101,8 +102,8 @@
       ],
     },
     {
-      character: "Noah",
-      url: def4,
+      character: "Auro",
+      url: auro,
       tokenId: 231,
       ownedBy: "0xab...xl2s",
       price: 0.12,

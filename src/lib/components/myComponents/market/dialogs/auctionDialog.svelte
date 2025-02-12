@@ -3,7 +3,7 @@
     import * as Dialog from "$lib/components/ui/dialog";
     import * as Tabs from "$lib/components/ui/tabs";
     import * as Table from "$lib/components/ui/table";
-    import Input from "$lib/components/ui/input/input.svelte";
+    import { Input } from "$lib/components/ui/input";
 
     const nftdata = [
         {
@@ -103,28 +103,28 @@
             type: "list",
             price: 3.49,
             owner: "0n23x2734",
-            date: "2025/01/26",
+            date: "25/01/26",
             buyer: "-",
         },
         {
             type: "sale",
             price: 2.49,
             owner: "0n23x2734",
-            date: "2025/01/26",
+            date: "25/01/26",
             buyer: "0n23x2734",
         },
         {
             type: "list",
             price: 2.49,
             owner: "0n23x2734",
-            date: "2025/01/26",
+            date: "25/01/26",
             buyer: "-",
         },
         {
             type: "mint",
             price: 1,
             owner: "0x00",
-            date: "2025/01/26",
+            date: "25/01/26",
             buyer: "0n23x2734",
         },
     ];
@@ -135,17 +135,98 @@
 <Dialog.Root>
     <Dialog.Trigger class="outline-none ">
         <Button
-            class="h-8 px-4 rounded-lg bg-[#ab9ff2] hover:bg-[#9587e0] border-zinc-200 text-white"
-            >bid</Button
+            class="h-8 px-4 rounded-lg bg-[#ab9ff2] text-white hover:bg-[#9587e0]"
+            >buy</Button
         >
     </Dialog.Trigger>
     <Dialog.Content>
         <Dialog.Header>
             <Dialog.Title
-                class="font-body pb-2 gap-2 text-white text-2xl flex items-center border-b border-zinc-800"
+                class="font-body pb-2 gap-2 text-white text-2xl flex items-center w-full "
             >
-                <div class="">{data.character}</div>
-                <div class="">#{data.tokenId}</div>
+                <div class="relative">
+                    <img src={data.url} alt="def1" class="rounded-t-xl" />
+                    <div class="absolute bottom-6 left-2 flex flex-col gap-2">
+                        <div class="font-logo text-5xl">{data.character}</div>
+                        <div
+                            class="bg-white/30 backdrop-blur-sm rounded-full p-1 px-1.5 pr-3 flex gap-1 items-center"
+                        >
+                            <div
+                                class="w-6 h-6 rounded-full bg-gradient-to-br from-zinc-100 to-red-400"
+                            ></div>
+                            <div class="text-sm text-zinc-200">0xab...b259</div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 left-2">
+                        {#if data.rarity == "common"}
+                            <div
+                                class="mt-2 absolute top-0 left-2 bg-zinc-900/50 backdrop-blur-sm rounded-lg p-1 px-3 flex gap-1 items-center"
+                            >
+                                <div class="text-xs text-zinc-200 font-body">
+                                    Common
+                                </div>
+                            </div>
+                        {:else if data.rarity == "uncommon"}
+                            <div
+                                class="mt-2 absolute top-0 left-2 bg-emerald-500/50 backdrop-blur-sm rounded-lg p-1 px-3 flex gap-1 items-center"
+                            >
+                                <div class="text-xs text-zinc-200 font-body">
+                                    Uncommon
+                                </div>
+                            </div>
+                        {:else if data.rarity == "rare"}
+                            <div
+                                class="mt-2 absolute top-0 left-2 bg-sky-500/50 backdrop-blur-sm rounded-lg p-1 px-3 flex gap-1 items-center"
+                            >
+                                <div class="text-xs text-zinc-200 font-body">
+                                    Rare
+                                </div>
+                            </div>
+                        {:else if data.rarity == "epic"}
+                            <div
+                                class="mt-2 absolute top-0 left-2 bg-violet-500/50 backdrop-blur-sm rounded-lg p-1 px-3 flex gap-1 items-center"
+                            >
+                                <div class="text-xs text-zinc-200 font-body">
+                                    Epic
+                                </div>
+                            </div>
+                        {:else if data.rarity == "legendary"}
+                            <div
+                                class="mt-2 absolute top-0 left-2 bg-amber-500/50 backdrop-blur-sm rounded-lg p-1 px-3 flex gap-1 items-center"
+                            >
+                                <div class="text-xs text-zinc-200 font-body">
+                                    Legendary
+                                </div>
+                            </div>
+                        {/if}
+                    </div>
+                    <div class="absolute top-3 right-2">
+                        <Dialog.Close
+                            class="p-1 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                ><path
+                                    fill="#f9f8fb"
+                                    d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"
+                                /></svg
+                            >
+                        </Dialog.Close>
+                    </div>
+
+                    <div class="absolute bottom-3 right-2 bg-zinc-900/50 backdrop-blur-sm rounded-md w-fit p-2 px-4">
+                        <div class="flex justify-between w-fit">
+                            
+                            <div class="flex flex-col gap-0 text-end">
+                                <div class="text-xs text-zinc-400 font-body">Ends in</div>
+                                <div class="text-sm text-white font-body">25:47</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Dialog.Title>
             <Dialog.Description>
                 <Tabs.Root value="overview" class="w-full ">
@@ -160,21 +241,12 @@
                         value="overview"
                         class="max-h-[500px] overflow-y-scroll"
                     >
-                        <div class="grid sm:grid-cols-2 w-full py-2 gap-4">
+                        <div class="grid sm:grid-cols-1 w-full gap-4">
                             <div
-                                class="w-full h-fit flex flex-col gap-4 col-span-2 sm:col-span-1"
-                            >
-                                <img
-                                    src={data.url}
-                                    alt="def1"
-                                    class="rounded-xl"
-                                />
-                            </div>
-                            <div
-                                class="w-full h-fit flex flex-col gap-2 col-span-2 sm:col-span-1"
+                                class="w-full h-fit flex flex-col gap-2 col-span-1 sm:col-span-1 items-center"
                             >
                                 <div
-                                    class="w-full flex flex-col gap-1 p-2 bg-zinc-950/80 rounded-lg justify-center"
+                                    class="w-full flex flex-col gap-1 p-2 rounded-lg justify-center"
                                 >
                                     <div
                                         class=" flex text-zinc-300 justify-between items-center"
@@ -183,167 +255,23 @@
                                             Current bid
                                         </div>
                                         <div
-                                            class="px-2 py-1 bg-black rounded-full font-body"
+                                            class="flex gap-1 text-white items-center text-lg font-body"
                                         >
-                                            <span class="text-xs text-zinc-400"
-                                                >Owned by:</span
+                                            {data.price}
+                                            <span class="text-zinc-400 text-sm"
+                                                >SOL</span
                                             >
-                                            0xab...b259
+                                            <div class="text-sm text-zinc-400">
+                                                | ${data.price * 200}
+                                            </div>
                                         </div>
                                     </div>
-                                    <div
-                                        class="flex gap-1 text-white items-center text-lg font-body"
-                                    >
-                                        {data.price}
-                                        <span class="text-zinc-400 text-sm"
-                                            >SOL</span
-                                        >
-                                        <div class="text-sm text-zinc-400">
-                                            | ${data.price * 200}
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <Input
-                                            type="number"
-                                            placeholder="Place a bid"
-                                            class="w-full text-sm text-white"
-                                        />
+                                    <div class="flex gap-2">
+                                        <Input class="bg-zinc-800/40 hover:bg-zinc-800/70 border-none  shadow-sm" placeholder="0.15"/>
                                         <Button
-                                            class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body"
+                                            class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body rounded-lg text-white"
                                             >Bid</Button
                                         >
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="bg-zinc-950/80 grid grid-cols-2 gap-2 p-2 rounded-lg"
-                                >
-                                    <div
-                                        class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
-                                    >
-                                        <div class="text-zinc-400 text-sm">
-                                            List price
-                                        </div>
-                                        <div class="text-white text-sm">
-                                            {data.price}
-                                            <span class="text-zinc-400"
-                                                >SOL</span
-                                            >
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
-                                    >
-                                        <div class="text-zinc-400 text-sm">
-                                            Floor price
-                                        </div>
-                                        <div class="text-white text-sm">
-                                            0.49 <span class="text-zinc-400"
-                                                >SOL</span
-                                            >
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
-                                    >
-                                        <div class="text-zinc-400 text-sm">
-                                            Floor diff.
-                                        </div>
-                                        <div class="text-white text-sm">
-                                            5000 <span class="text-zinc-400"
-                                                >%</span
-                                            >
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
-                                    >
-                                        <div class="text-zinc-400 text-sm">
-                                            Top offer
-                                        </div>
-                                        <div class="text-white text-sm">
-                                            1.8 <span class="text-zinc-400"
-                                                >SOL</span
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-2">
-                                <div class="text-white text-lg font-body">
-                                    Prompt
-                                </div>
-                                <div
-                                    class="bg-zinc-950/80 p-2 rounded-lg flex flex-col gap-2 font-body"
-                                >
-                                    <div class="">
-                                        <div class="text-sm">Background</div>
-                                        <div
-                                            class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md"
-                                        >
-                                            <div
-                                                class="text-xs text-zinc-400 px-2"
-                                            >
-                                                A sprawling futuristic
-                                                metropolis at dusk, illuminated
-                                                by neon lights and towering
-                                                skyscrapers made of glass and
-                                                steel. The streets are alive
-                                                with a mix of people, autonomous
-                                                vehicles, and digital billboards
-                                                flashing advertisements in
-                                                multiple languages. Elevated
-                                                highways crisscross above, while
-                                                a high-speed monorail glides
-                                                between the buildings. The city
-                                                skyline is a blend of
-                                                cutting-edge architecture and
-                                                lush rooftop gardens, with
-                                                drones hovering in the sky
-                                                delivering packages. A soft glow
-                                                from street lamps reflects off
-                                                the wet pavement, hinting at a
-                                                recent rain shower, as the hum
-                                                of technology and distant
-                                                chatter fills the air
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="">
-                                        <div class="text-sm font-body">
-                                            Outfit
-                                        </div>
-                                        <div
-                                            class="w-full bg-zinc-900 flex flex-col gap-1 py-2 justify-center items-center rounded-md font-body"
-                                        >
-                                            <div
-                                                class="text-xs text-zinc-400 px-2"
-                                            >
-                                                A sprawling futuristic
-                                                metropolis at dusk, illuminated
-                                                by neon lights and towering
-                                                skyscrapers made of glass and
-                                                steel. The streets are alive
-                                                with a mix of people, autonomous
-                                                vehicles, and digital billboards
-                                                flashing advertisements in
-                                                multiple languages. Elevated
-                                                highways crisscross above, while
-                                                a high-speed monorail glides
-                                                between the buildings. The city
-                                                skyline is a blend of
-                                                cutting-edge architecture and
-                                                lush rooftop gardens, with
-                                                drones hovering in the sky
-                                                delivering packages. A soft glow
-                                                from street lamps reflects off
-                                                the wet pavement, hinting at a
-                                                recent rain shower, as the hum
-                                                of technology and distant
-                                                chatter fills the air
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -351,7 +279,7 @@
                     </Tabs.Content>
                     <Tabs.Content
                         value="offers"
-                        class="max-h-[500px] overflow-y-scroll"
+                        class="max-h-[200px] overflow-y-scroll px-2"
                     >
                         <Table.Root>
                             <Table.Caption
@@ -398,7 +326,7 @@
                     </Tabs.Content>
                     <Tabs.Content
                         value="activity"
-                        class="h-[500px] overflow-y-scroll"
+                        class="h-[200px] overflow-y-scroll px-2"
                     >
                         <Table.Root>
                             <Table.Caption
