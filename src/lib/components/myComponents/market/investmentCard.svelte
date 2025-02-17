@@ -1,5 +1,7 @@
 <script>
     import Button from "$lib/components/ui/button/button.svelte";
+    import CountDown from "./countDown.svelte";
+    import InvestDialog from "./dialogs/investDialog.svelte";
 
     const nftdata = [
         {
@@ -125,6 +127,7 @@
         },
     ];
 
+
     export let data;
 </script>
 
@@ -222,15 +225,14 @@
                     <div class="text-[10px] text-zinc-600 font-body">
                         Ends in
                     </div>
-                    <div class="text-xs text-black font-body">25:47</div>
+                    <div class="text-xs text-black font-body">
+                        <CountDown time={sale.timerData}/>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="h-fit rounded-b-xl">
-            <Button
-                class="h-8 bg-[#ab9ff2] hover:bg-[#9587e0] rounded-b-xl rounded-t-none w-full text-white"
-                >Invest now</Button
-            >
+        <div class="h-fit rounded-b-xl w-full">
+            <InvestDialog data={sale} />
         </div>
     </div>
 {/each}

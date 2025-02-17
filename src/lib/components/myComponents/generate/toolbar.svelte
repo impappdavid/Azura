@@ -141,6 +141,7 @@
                 </Select.Root>
             </div>
         </div>
+        {#if value}
         <div class="">
             <div class="flex flex-col w-full gap-1">
                 <div class="font-body text-xs text-zinc-300 text-start">
@@ -151,6 +152,8 @@
                 />
             </div>
         </div>
+        {/if}
+        {#if value == "uncommon" || value == "rare" || value == "epic" || value == "legendary"}
         <div class="">
             <div class="flex flex-col gap-1 w-full">
                 <div class="font-body text-xs text-zinc-300 text-start">
@@ -161,6 +164,8 @@
                 />
             </div>
         </div>
+        {/if}
+        {#if  value == "rare" || value == "epic" || value == "legendary"}
         <div class="">
             <div class="flex flex-col gap-1 w-full">
                 <div class="font-body text-xs text-zinc-300 text-start">
@@ -171,6 +176,8 @@
                 />
             </div>
         </div>
+        {/if}
+        {#if value == "epic" || value == "legendary"}
         <div class="">
             <div class="flex flex-col gap-1 w-full">
                 <div class="font-body text-xs text-zinc-300 text-start">
@@ -179,6 +186,7 @@
                 <Textarea placeholder="Relaxed with a subtle smile." />
             </div>
         </div>
+        {/if}
     </div>
     <div class="flex flex-col gap-2">
         {#if !value}
@@ -186,7 +194,7 @@
             disabled
             class="w-full bg-[#9587e0] font-body rounded-xl hover:bg-[#9487e0b4] flex text-white"
         >
-            {#if value}
+            {#if value && iValue == "normal"}
                 Mint for {value == "common"
                     ? 0.05
                     : value == "uncommon"
@@ -198,7 +206,7 @@
                           : value == "legendary"
                             ? 1
                             : "null"}
-            {:else}
+            {:else if iValue == "investment"}
                 Mint for {iValue == "common"
                     ? 0.125
                     : iValue == "uncommon"
@@ -212,6 +220,7 @@
                             : "null"}
         
             {/if}
+            <!--valueType-->
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -228,7 +237,7 @@
             <Button
             class="w-full bg-[#9587e0] font-body rounded-xl hover:bg-[#9487e0b4] flex text-white"
         >
-            {#if value}
+            {#if value && valueType == "normal"}
                 Mint for {value == "common"
                     ? 0.05
                     : value == "uncommon"
@@ -240,16 +249,16 @@
                           : value == "legendary"
                             ? 1
                             : "null"}
-            {:else}
-                Mint for {iValue == "common"
+            {:else if valueType == "investment"}
+                Mint for {value == "common"
                     ? 0.125
-                    : iValue == "uncommon"
+                    : value == "uncommon"
                       ? 0.25
-                      : iValue == "rare"
+                      : value == "rare"
                         ? 0.5
-                        : iValue == "epic"
+                        : value == "epic"
                           ? 1.25
-                          : iValue == "legendary"
+                          : value == "legendary"
                             ? 2.5
                             : "null"}
             {/if}

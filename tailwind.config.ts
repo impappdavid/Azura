@@ -15,6 +15,7 @@ const config: Config = {
 			}
 		},
 		extend: {
+			
 			colors: {
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
@@ -92,7 +93,7 @@ const config: Config = {
       		},
 		},
 	},
-	plugins: [tailwindcssAnimate],
+	
 };
 
 export default config;

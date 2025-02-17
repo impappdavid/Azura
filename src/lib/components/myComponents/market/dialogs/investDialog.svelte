@@ -4,6 +4,8 @@
     import * as Tabs from "$lib/components/ui/tabs";
     import * as Table from "$lib/components/ui/table";
     import { Input } from "$lib/components/ui/input";
+    import * as ToggleGroup from "$lib/components/ui/toggle-group";
+    import * as HoverCard from "$lib/components/ui/hover-card";
     import CountDown from "../countDown.svelte";
 
     const nftdata = [
@@ -130,14 +132,18 @@
         },
     ];
 
+    let solByPercentage = 0.25;
+
+    let investPercent = 0;
+
     export let data;
 </script>
 
 <Dialog.Root>
-    <Dialog.Trigger class="outline-none ">
+    <Dialog.Trigger class="outline-none w-full">
         <Button
-            class="h-8 px-4 rounded-lg bg-[#ab9ff2] text-white hover:bg-[#9587e0]"
-            >buy</Button
+            class="h-8 bg-[#ab9ff2] hover:bg-[#9587e0] rounded-b-xl rounded-t-none w-full text-white"
+            >Invest now</Button
         >
     </Dialog.Trigger>
     <Dialog.Content>
@@ -218,11 +224,17 @@
                         </Dialog.Close>
                     </div>
 
-                    <div class="absolute bottom-3 right-2 bg-zinc-900/50 backdrop-blur-sm rounded-md w-fit p-2 px-4">
+                    <div
+                        class="absolute bottom-3 right-2 bg-zinc-900/50 backdrop-blur-sm rounded-md w-fit p-2 px-4"
+                    >
                         <div class="flex justify-between w-fit">
                             <div class="flex flex-col gap-0 text-end">
-                                <div class="text-xs text-zinc-400 font-body">Ends in</div>
-                                <div class="text-sm text-white font-body"><CountDown time={data.timerData} /></div>
+                                <div class="text-xs text-zinc-400 font-body">
+                                    Ends in
+                                </div>
+                                <div class="text-sm text-white font-body">
+                                    <CountDown time={data.timerData} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -246,31 +258,171 @@
                                 class="w-full h-fit flex flex-col gap-2 col-span-1 sm:col-span-1 items-center"
                             >
                                 <div
-                                    class="w-full flex flex-col gap-1 p-2 rounded-lg justify-center"
+                                    class="w-full flex flex-col gap-2 p-2 rounded-lg justify-center"
                                 >
                                     <div
                                         class=" flex text-zinc-300 justify-between items-center"
                                     >
                                         <div class="text-lg font-body">
-                                            Current bid
+                                            Invest price
                                         </div>
                                         <div
                                             class="flex gap-1 text-white items-center text-lg font-body"
                                         >
-                                            {data.price}
+                                            {investPercent}
                                             <span class="text-zinc-400 text-sm"
                                                 >SOL</span
                                             >
                                             <div class="text-sm text-zinc-400">
-                                                | ${data.price * 200}
+                                                | ${investPercent * 200}
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex gap-2">
-                                        <Input class="bg-zinc-800/40 hover:bg-zinc-800/70 border-none  shadow-sm" placeholder="0.15"/>
+                                    <div
+                                        class=" flex text-zinc-300 justify-between items-center"
+                                    >
+                                        <div
+                                            class="text-sm text-zinc-400 font-body flex gap-1"
+                                        >
+                                            EST. profit
+                                            <HoverCard.Root>
+                                                <HoverCard.Trigger
+                                                    rel="noreferrer noopener"
+                                                    class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 cursor-default"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        viewBox="0 0 24 24"
+                                                        ><path
+                                                            fill="#9487e0b4"
+                                                            d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"
+                                                        /></svg
+                                                    >
+                                                </HoverCard.Trigger>
+                                                <HoverCard.Content
+                                                    class="w-fit"
+                                                >
+                                                    <div
+                                                        class="flex justify-between space-x-4 px-2 py-1 text-zinc-400 text-xs font-body"
+                                                    >
+                                                        When the NFT is sold you get the <br> percentage What you bought here. <br>
+                                                        Example: You bought 50% nft <br> sold for 10SOL you get 5SOL
+                                                    </div>
+                                                </HoverCard.Content>
+                                            </HoverCard.Root>
+                                        </div>
+                                        <div
+                                            class="flex gap-1 text-white items-center text-sm font-body"
+                                        >
+                                            {parseFloat((investPercent * 0.95).toFixed(3))}
+                                            <span class="text-zinc-400 text-sm"
+                                                >SOL</span
+                                            >
+                                            <div class="text-sm text-zinc-400">
+                                                | ${parseFloat((investPercent * 200 * 0.95).toFixed(3))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full">
+                                        <ToggleGroup.Root type="single">
+                                            <ToggleGroup.Item
+                                                value="five"
+                                                aria-label="five"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        solByPercentage)}
+                                            >
+                                                5%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="ten"
+                                                aria-label="ten"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        2 * solByPercentage)}
+                                            >
+                                                10%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="fifteen"
+                                                aria-label="fifteen"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        3 * solByPercentage)}
+                                            >
+                                                15%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="twenty"
+                                                aria-label="twenty"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        4 * solByPercentage)}
+                                            >
+                                                20%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="twentyfive"
+                                                aria-label="twentyfive"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        5 * solByPercentage)}
+                                            >
+                                                25%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="thirty"
+                                                aria-label="thirty"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        6 * solByPercentage)}
+                                            >
+                                                30%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="thirtyfive"
+                                                aria-label="thirtyfive"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        7 * solByPercentage)}
+                                            >
+                                                35%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="fourty"
+                                                aria-label="fourty"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        8 * solByPercentage)}
+                                            >
+                                                40%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="fourtyfive"
+                                                aria-label="fourtyfive"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        9 * solByPercentage)}
+                                            >
+                                                45%
+                                            </ToggleGroup.Item>
+                                            <ToggleGroup.Item
+                                                value="fifty"
+                                                aria-label="fifty"
+                                                onclick={() =>
+                                                    (investPercent =
+                                                        10 * solByPercentage)}
+                                            >
+                                                50%
+                                            </ToggleGroup.Item>
+                                        </ToggleGroup.Root>
+                                    </div>
+                                    <div class="w-full">
                                         <Button
-                                            class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body rounded-lg text-white"
-                                            >Bid</Button
+                                            class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body rounded-lg text-white w-full"
+                                            >Invest</Button
                                         >
                                     </div>
                                 </div>

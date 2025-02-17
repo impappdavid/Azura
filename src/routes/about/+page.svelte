@@ -10,7 +10,7 @@
     <div
         class="h-full w-full bg-[#9587e0] pt-20 pb-8 flex flex-col items-center"
     >
-        <div class="w-full max-w-2xl bg-zinc-900 p-4 flex flex-col gap-8">
+        <div class="w-full max-w-2xl bg-zinc-900  p-8 flex flex-col gap-8">
             <div class="flex flex-col gap-4">
                 <div class="font-body text-3xl font-semibold">
                     Building the Future of NFTs
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="w-full max-w-2xl bg-zinc-900 p-4 flex flex-col gap-8">
+        <div class="w-full max-w-2xl bg-zinc-900 p-8 flex flex-col gap-8">
             <div class="flex flex-col gap-4">
                 <div class="font-body text-3xl font-semibold">
                     What Makes Azurox Unique?
@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <div class="w-full max-w-2xl bg-zinc-900 p-4 flex flex-col gap-8">
+        <div class="w-full max-w-2xl bg-zinc-900 p-8 flex flex-col gap-8">
             <div class="flex flex-col gap-4">
                 <div class="font-body text-3xl font-semibold">
                     Our Vision & Roadmap

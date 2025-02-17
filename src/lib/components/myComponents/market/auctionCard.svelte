@@ -1,6 +1,7 @@
 <script>
   
-    import AuctionDialog from "./dialogs/auctionDialog.svelte";
+    import CountDown from "./countDown.svelte";
+import AuctionDialog from "./dialogs/auctionDialog.svelte";
 
     const nftdata = [
         {
@@ -191,7 +192,7 @@
                 </div>
                 <div class="flex flex-col gap-0 text-end">
                     <div class="text-[10px] text-zinc-400 font-body">Ends in</div>
-                    <div class="text-xs text-white font-body">25:47</div>
+                    <div class="text-xs text-white font-body"><CountDown time={sale.timerData} /></div>
                 </div>
             </div>
         </div>
@@ -203,7 +204,6 @@
             <div class="w-7 h-7 bg-gradient-to-br from-zinc-50 to-indigo-400 rounded-full"></div>
             <div class="flex flex-col">
                 <div class="text-xs font-body text-black">0xab...b259</div>
-                <div class="text-[10px] font-body text-zinc-600">286 likes</div>
             </div>
         </div>
         <div class="flex items-center">
