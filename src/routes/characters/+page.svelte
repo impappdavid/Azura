@@ -1,12 +1,12 @@
 <script>
-    import def1 from "$lib/imgs/s1-0.jpg";
-    import def3 from "$lib/imgs/s1-1.jpg";
-    import def4 from "$lib/imgs/s1-2.jpg";
-    import kai from "$lib/imgs/kai.png";
-    import auro from "$lib/imgs/goldenretriver.jpg";
+    import Season1 from "$lib/components/myComponents/characters/season1.svelte";
+    import Navbar from "$lib/components/myComponents/navbar.svelte";
 </script>
 
-<div class="relative w-full h-screen bg-zinc-950 py-24 flex flex-col gap-16">
+<Navbar />
+<div
+    class="relative w-full h-full sm:h-screen  bg-zinc-950 pt-20 pb-8 flex flex-col gap-16 transition-all ease-in-out duration-300"
+>
     <!-- SVG Noise Overlay -->
     <div class="absolute inset-0 pointer-events-none opacity-10">
         <svg class="w-full h-full">
@@ -22,10 +22,5 @@
             ></rect>
         </svg>
     </div>
-    <div class="flex justify-center gap-8">
-    </div>
+    <Season1 />
 </div>
-
-<style>
-   
-</style>

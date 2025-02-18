@@ -1,29 +1,126 @@
 <script>
-
-    import icon1 from "$lib/imgs/icons/icon1.png"
-    import icon7 from "$lib/imgs/icons/icon7.png"
-    import icon8 from "$lib/imgs/icons/icon8.png"
-    import icon19 from "$lib/imgs/icons/icon19.png"
-    import icon40 from "$lib/imgs/icons/icon40.png"
+    import * as Sheet from "$lib/components/ui/sheet/index.js";
+    import icon8 from "$lib/imgs/icons/icon8.png";
+    import icon19 from "$lib/imgs/icons/icon19.png";
+    import icon40 from "$lib/imgs/icons/icon40.png";
+    import hamburger from "$lib/imgs/icons/hamburger.png";
 </script>
 
 <nav class="flex w-full p-4 justify-between items-center fixed top-0 z-50">
-    <div class="flex gap-8 w-full max-w-md">
-        <img src={icon8} alt="asd" class="w-16 h-12">
-        <div class="flex gap-3 items-center font-body">
-            <a href="/" aria-label="characters" class="text-xs border-2 p-1 px-2 text-zinc-400  hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300">CHARACTERS</a>
-            <a href="/" aria-label="about us" class="text-xs border-2 p-1 px-2 text-zinc-400  hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300">ABOUT US</a>
-            <a href="/" aria-label="news" class="text-xs border-2 p-1 px-2 text-zinc-400  hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300">NEWS</a>
+    <div class="flex lg:hidden">
+        <Sheet.Root>
+            <Sheet.Trigger class="bg-transparent outline-none ">
+                <img src={hamburger} alt="asd" class="w-16 h-12" />
+            </Sheet.Trigger>
+            <Sheet.Content
+                side="bottom"
+                class="h-full bg-zinc-950/80 backdrop-blur-xs flex flex-col gap-8"
+            >
+                <Sheet.Header>
+                    <Sheet.Title
+                        ><img
+                            src={icon40}
+                            alt="asd"
+                            class="w-16 h-12 hover:cursor-pointer hover:rotate-180 transition-all ease-in-out duration-300"
+                        /></Sheet.Title
+                    >
+                </Sheet.Header>
+                <div class="flex flex-col gap-2">
+                    <a
+                        href="../../characters"
+                        class=" text-white px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">CHARACTERS</div>
+                    </a>
+                    <a
+                        href="../"
+                        class=" text-white px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">ABOUT US</div>
+                    </a>
+                    <a
+                        href="../../azurox"
+                        class=" text-white px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">NEWS</div>
+                    </a>
+                    <a
+                        href="../"
+                        class=" text-white px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
+                    >
+                        <div class="text-2xl font-bold">CONTACT</div>
+                    </a>
+                </div>
+            </Sheet.Content>
+        </Sheet.Root>
+    </div>
+    <div class="hidden lg:flex gap-8 w-full max-w-md">
+        <img
+            src={icon8}
+            alt="asd"
+            class="w-16 h-12 animate-[slideinLeft_1s_ease-in-out]"
+        />
+        <div
+            class="flex gap-3 items-center font-body animate-[slideinFromTop_3s_ease-in-out]"
+        >
+            <a
+                href="../../characters"
+                aria-label="characters"
+                class="text-xs border-2 p-1 px-2 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300"
+                >CHARACTERS</a
+            >
+            <a
+                href="/"
+                aria-label="about us"
+                class="text-xs border-2 p-1 px-2 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300"
+                >ABOUT US</a
+            >
+            <a
+                href="/"
+                aria-label="news"
+                class="text-xs border-2 p-1 px-2 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300"
+                >NEWS</a
+            >
         </div>
     </div>
     <div class="">
-        <img src={icon40} alt="asd" class="w-16 h-12 hover:cursor-pointer hover:rotate-180 transition-all ease-in-out duration-300">
+        <a href="../../" aria-label="home">
+            <img
+                src={icon40}
+                alt="asd"
+                class="w-16 h-12 hover:cursor-pointer hover:rotate-180 transition-all ease-in-out duration-300"
+            />
+        </a>
     </div>
-    <div class="w-full max-w-md flex justify-end gap-8">
-        <div class="flex gap-3 items-center font-body">
-            <a href="/" aria-label="characters" class="text-xs border-2 p-1 px-2 text-zinc-400  hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300">CONTACT</a>
-            <a href="/" aria-label="about us" class="text-xs border-2 p-1 px-2   border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300">PLATFORM</a>
+    <div class="hidden lg:flex w-full max-w-md justify-end gap-8">
+        <div
+            class="flex gap-3 items-center font-body animate-[slideinFromTop_3s_ease-in-out]"
+        >
+            <a
+                href="/"
+                aria-label="characters"
+                class="text-xs border-2 p-1 px-2 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300"
+                >CONTACT</a
+            >
+            <a
+                href="/"
+                aria-label="about us"
+                class="text-xs border-2 p-1 px-2 border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300"
+                >PLATFORM</a
+            >
         </div>
-        <img src={icon19} alt="asd" class="w-16 h-12">
+        <img
+            src={icon19}
+            alt="asd"
+            class="w-16 h-12 animate-[slideinRight_1s_ease-in-out]"
+        />
+    </div>
+    <div class="lg:hidden flex">
+        <a
+            href="/"
+            aria-label="about us"
+            class="text-xs border-2 p-1 px-2 border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300"
+            >PLATFORM</a
+        >
     </div>
 </nav>

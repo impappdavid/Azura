@@ -89,3 +89,34 @@
 *::-webkit-scrollbar-thumb {           /* roundness of the scroll thumb */
   border: 3px solid rgb(24 24 27);  /* creates padding around scroll thumb */
 }
+
+@keyframes slideinLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideinRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideinFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
