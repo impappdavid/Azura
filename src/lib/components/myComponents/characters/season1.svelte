@@ -22,7 +22,7 @@
     </div>
 
     <div
-        class="w-full flex flex-col font-body gap-4 py-4 animate-[slideinFromTop_3s_ease-in-out]"
+        class="w-full flex flex-col font-body gap-4 py-4 animate-[reveal_3s_ease-in-out]"
     >
         <div
             class="text-xl sm:text-3xl font-body p-1 px-2 border-2 border-green-500/80 text-green-500 w-fit"

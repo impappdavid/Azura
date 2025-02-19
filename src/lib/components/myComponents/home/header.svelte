@@ -27,14 +27,14 @@
         </svg>
     </div>
     <div class="flex justify-between h-screen">
-        <div class="flex flex-col w-full max-w-xs justify-between items-start animate-[slideinLeft_1s_ease-in-out]">
+        <div class="flex flex-col w-full max-w-[50px] justify-between items-start animate-[slideinLeft_1s_ease-in-out]">
             <img src={icon38} alt="icon" class="w-16 h-34" />
             <img src={icon22} alt="icon" class="w-14 h-28" />
             <img src={icon38Flip} alt="icon" class="w-16 h-34" />
         </div>
 
         <div
-            class="w-full flex justify-center items-center flex-col text-center font-body gap-4 animate-[slideinFromTop_3s_ease-in-out]"
+            class="w-full flex justify-center items-center flex-col text-center font-body gap-4 animate-[reveal_3s_ease-in-out] relative"
         >
             <div class="text-xs md:text-lg text-zinc-400 ">
                 Mint, trade, and evolve your NFTs on Solana!
@@ -50,9 +50,10 @@
                     <div class="border-2 border-[#9D82F7c7] text-[#9D82F7] text-4xl lg:text-6xl p-1.5 px-2 font-medium  hover:bg-[#9D82F7] hover:text-black transition-all ease-in-out duration-300 cursor-default">Merge</div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="flex flex-col w-full max-w-xs justify-between items-end animate-[slideinRight_1s_ease-in-out]">
+        <div class="flex flex-col w-full max-w-[50px] justify-between items-end animate-[slideinRight_1s_ease-in-out]">
             <img
                 src={icon38MirrorTop}
                 alt="icon"
