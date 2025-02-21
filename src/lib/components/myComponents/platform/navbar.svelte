@@ -84,7 +84,7 @@
         <div
             class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md flex items-center"
         >
-            TOTAL NFTS / 0
+            TOTAL NFTS / 6
         </div>
         <div
             class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md flex items-center"

@@ -61,7 +61,7 @@
 
 {#each data as nft}
     <div
-        class="h-full max-h-[300px] w-full max-w-[280px] transition-all duration-300 ease-in-out relative  cursor-pointer group"
+        class="h-full max-h-[300px] w-full max-w-[280px] transition-all duration-300 ease-in-out relative  cursor-pointer group border-2"
     >
         <div class="relative overflow-hidden  h-full">
             <img
@@ -88,7 +88,7 @@
         <div
             class={`mt-2 absolute top-0 left-2 bg-green-500/30 backdrop-blur-lg  p-1 px-2 flex gap-1 items-center `}
         >
-            <div class="text-xs text-green-500">S1</div>
+            <div class="text-xs text-green-400">S1</div>
         </div>
     </div>
 {/each}

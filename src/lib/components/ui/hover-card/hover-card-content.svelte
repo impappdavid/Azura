@@ -20,7 +20,7 @@
 		{sideOffset}
 		{align}
 		class={cn(
-			"bg-popover text-popover-foreground z-50 w-64 rounded-md border shadow-md outline-none",
+			"bg-transparent backdrop-blur-lg text-popover-foreground z-50 w-64 border-2 shadow-md outline-none",
 			className
 		)}
 		{...restProps}
