@@ -110,7 +110,7 @@
                 </a
             >
             <a
-                href="/"
+                href="../../platform/home"
                 aria-label="about us"
                 class="text-xs border-2 p-1 px-2 border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md"
                 >PLATFORM</a
@@ -124,7 +124,7 @@
     </div>
     <div class="lg:hidden flex">
         <a
-            href="/"
+            href="../../platform/home"
             aria-label="about us"
             class="text-xs border-2 p-1 px-2 border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 w-fit max-w-[100px] backdrop-blur-md"
             >PLATFORM</a
