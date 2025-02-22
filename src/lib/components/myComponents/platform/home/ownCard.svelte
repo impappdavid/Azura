@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import def1 from "$lib/imgs/s1-0.jpg";
     import def3 from "$lib/imgs/s1-1.jpg";
     import def4 from "$lib/imgs/s1-2.jpg";
@@ -50,7 +50,7 @@
         },
     ];
 
-    const rarityColors = {
+    const rarityColors: Object = {
         common: "bg-zinc-900/30",
         uncommon: "bg-green-500/30",
         rare: "bg-blue-500/30",

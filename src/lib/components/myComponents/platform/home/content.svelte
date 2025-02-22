@@ -303,9 +303,25 @@
                         SORT BY RARITY
                     </div>
                 </div>
-                <div class="">
-                    <Input class="h-7 bg-transparent rounded-none text-xs border-2" placeholder="Search..."/>
+                <div class="relative w-full max-w-64 flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5 pointer-events-none"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+                      d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+                    /><path d="M21 21l-6 -6" /></svg
+                  >
+                  <Input type="text" placeholder="Search..." class="pl-10 h-7 bg-transparent rounded-none text-xs border-2" />
                 </div>
+                
             </div>
 
             <div class="w-full h-full grid grid-cols-7 gap-4">
