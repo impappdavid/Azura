@@ -3,6 +3,8 @@
     import * as Dialog from "$lib/components/ui/dialog";
     import * as Tabs from "$lib/components/ui/tabs";
     import * as Table from "$lib/components/ui/table";
+    import { Input } from "$lib/components/ui/input";
+    import CountDown from "../countDown.svelte";
 
     const nftdata = [
         {
@@ -200,7 +202,9 @@
                         {/if}
                     </div>
                     <div class="absolute top-3 right-2">
-                        <Dialog.Close class="p-1 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all">
+                        <Dialog.Close
+                            class="p-1 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="14"
@@ -213,6 +217,15 @@
                             >
                         </Dialog.Close>
                     </div>
+
+                    <div class="absolute bottom-3 right-2 bg-zinc-900/50 backdrop-blur-sm rounded-md w-fit p-2 px-4">
+                        <div class="flex justify-between w-fit">
+                            <div class="flex flex-col gap-0 text-end">
+                                <div class="text-xs text-zinc-400 font-body">Ends in</div>
+                                <div class="text-sm text-white font-body"><CountDown time={data.timerData} /></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Dialog.Title>
             <Dialog.Description>
@@ -221,12 +234,12 @@
                         class="flex w-full justify-start border-b border-zinc-800 text-md font-body"
                     >
                         <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
-
+                        <Tabs.Trigger value="offers">Offers</Tabs.Trigger>
                         <Tabs.Trigger value="activity">Activity</Tabs.Trigger>
                     </Tabs.List>
                     <Tabs.Content
                         value="overview"
-                        class="max-h-[200px] overflow-y-scroll"
+                        class="max-h-[500px] overflow-y-scroll"
                     >
                         <div class="grid sm:grid-cols-1 w-full gap-4">
                             <div
@@ -239,7 +252,7 @@
                                         class=" flex text-zinc-300 justify-between items-center"
                                     >
                                         <div class="text-lg font-body">
-                                            Price
+                                            Current bid
                                         </div>
                                         <div
                                             class="flex gap-1 text-white items-center text-lg font-body"
@@ -253,16 +266,64 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <Button
-                                        class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body rounded-lg text-white"
-                                        >Buy</Button
-                                    >
+                                    <div class="flex gap-2">
+                                        <Input class="bg-zinc-800/40 hover:bg-zinc-800/70 border-none  shadow-sm" placeholder="0.15"/>
+                                        <Button
+                                            class="bg-[#ab9ff2] hover:bg-[#9587e0] font-body rounded-lg text-white"
+                                            >Bid</Button
+                                        >
+                                    </div>
                                 </div>
                             </div>
-                        </div></Tabs.Content
+                        </div>
+                    </Tabs.Content>
+                    <Tabs.Content
+                        value="offers"
+                        class="max-h-[200px] overflow-y-scroll px-2"
                     >
-
+                        <Table.Root>
+                            <Table.Caption
+                                >A list of your recent offers.</Table.Caption
+                            >
+                            <Table.Header class="bg-zinc-800 hover:bg-zinc-800">
+                                <Table.Row>
+                                    <Table.Head class="w-[100px]"
+                                        >Price</Table.Head
+                                    >
+                                    <Table.Head>From</Table.Head>
+                                    <Table.Head>Updated</Table.Head>
+                                    <Table.Head class="text-right"
+                                        >Expires in</Table.Head
+                                    >
+                                </Table.Row>
+                            </Table.Header>
+                            <Table.Body>
+                                {#each nftdata as nft, i (i)}
+                                    <Table.Row>
+                                        <Table.Cell
+                                            class="font-medium text-white"
+                                            >{nft.price}
+                                            <span class="text-zinc-400 text-xs"
+                                                >SOL</span
+                                            ></Table.Cell
+                                        >
+                                        <Table.Cell
+                                            class="text-zinc-400 text-xs"
+                                            >{nft.from}</Table.Cell
+                                        >
+                                        <Table.Cell
+                                            class="text-zinc-400 text-xs"
+                                            >{nft.updated}</Table.Cell
+                                        >
+                                        <Table.Cell
+                                            class="text-right text-zinc-400 text-xs"
+                                            >{nft.expiresin}</Table.Cell
+                                        >
+                                    </Table.Row>
+                                {/each}
+                            </Table.Body>
+                        </Table.Root>
+                    </Tabs.Content>
                     <Tabs.Content
                         value="activity"
                         class="h-[200px] overflow-y-scroll px-2"
@@ -284,7 +345,7 @@
                                     >
                                 </Table.Row>
                             </Table.Header>
-                            <Table.Body >
+                            <Table.Body>
                                 {#each activity as active, i (i)}
                                     <Table.Row>
                                         <Table.Cell class="font-body">

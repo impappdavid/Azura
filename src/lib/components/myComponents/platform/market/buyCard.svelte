@@ -1,7 +1,8 @@
 <script>
-  
-    import CountDown from "./countDown.svelte";
-import AuctionDialog from "./dialogs/auctionDialog.svelte";
+    import FixbuyDialog from "./dialogs/fixbuyDialog.svelte";
+
+    
+   
 
     const nftdata = [
         {
@@ -129,87 +130,72 @@ import AuctionDialog from "./dialogs/auctionDialog.svelte";
 
     export let data;
 </script>
+
 {#each data as sale}
-<div
-    class="h-full max-h-[260px] w-full max-w-[200px] transition-all duration-300 ease-in-out relative cursor-pointer group"
->
-    <div class="relative overflow-hidden  h-[220px] ">
-        <img
-            src={sale.url}
-            alt="def1"
-            class="h-full w-full object-cover transition-all duration-300 ease-in-out  group-hover:scale-110"
-        />
-        
-    </div>
-    
-    {#if sale.rarity == "common"}
+    <div
+        class="h-[320px] w-full max-w-[280px] transition-all duration-300 ease-in-out relative cursor-pointer group"
+    >
+        <div class="relative overflow-hidden h-full max-h-[280px]">
+            <img
+                src={sale.url}
+                alt="nft"
+                class="h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+            />
+        </div>
+        {#if sale.rarity == "common"}
             <div
-                class="mt-2 absolute top-0 left-2 bg-zinc-900/50 backdrop-blur-sm  p-1 px-2 flex gap-1 items-center"
+                class="mt-2 absolute top-0 right-2 bg-zinc-900/50 backdrop-blur-lg p-1 px-2 flex gap-1 items-center"
             >
                 <div class="text-[10px] text-zinc-200 font-body">Common</div>
             </div>
         {:else if sale.rarity == "uncommon"}
             <div
-                class="mt-2 absolute top-0 left-2 bg-emerald-500/50 backdrop-blur-sm p-1 px-2 flex gap-1 items-center"
+                class="mt-2 absolute top-0 right-2 bg-emerald-500/50 backdrop-blur-lg p-1 px-2 flex gap-1 items-center"
             >
                 <div class="text-[10px] text-zinc-200 font-body">Uncommon</div>
             </div>
         {:else if sale.rarity == "rare"}
             <div
-                class="mt-2 absolute top-0 left-2 bg-sky-500/50 backdrop-blur-sm  p-1 px-2 flex gap-1 items-center"
+                class="mt-2 absolute top-0 right-2 bg-sky-500/50 backdrop-blur-lg p-1 px-2 flex gap-1 items-center"
             >
                 <div class="text-[10px] text-zinc-200 font-body">Rare</div>
             </div>
         {:else if sale.rarity == "epic"}
             <div
-                class="mt-2 absolute top-0 left-2 bg-violet-500/50 backdrop-blur-sm  p-1 px-2 flex gap-1 items-center"
+                class="mt-2 absolute top-0 right-2 bg-violet-500/50 backdrop-blur-lg p-1 px-2 flex gap-1 items-center"
             >
                 <div class="text-[10px] text-zinc-200 font-body">Epic</div>
             </div>
         {:else if sale.rarity == "legendary"}
             <div
-                class="mt-2 absolute top-0 left-2 bg-amber-500/50 backdrop-blur-sm  p-1 px-2 flex gap-1 items-center"
+                class="mt-2 absolute top-0 right-2 bg-amber-500/50 backdrop-blur-lg p-1 px-2 flex gap-1 items-center"
             >
                 <div class="text-[10px] text-zinc-200 font-body">Legendary</div>
             </div>
         {/if}
-    <div
-        class="mt-2 absolute top-0 right-2 bg-zinc-950/50 backdrop-blur-sm  p-1 flex gap-1 items-center hover:text-red-500"
-    >
-        <div class="text-xs text-zinc-200 hover:text-red-500 transition-all">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-heart "><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+        <div
+            class={`mt-2 absolute top-0 left-2 bg-green-500/30 backdrop-blur-lg  p-1 px-2 flex gap-1 items-center `}
+        >
+            <div class="text-xs text-green-400">S1</div>
         </div>
-    </div>
-
-    <div
-        class="mt-2 absolute bottom-12 w-full   p-1 flex gap-1 items-center"
-    >
-        <div class="bg-zinc-950/50 backdrop-blur-sm w-full p-2">
-            <div class="flex justify-between">
-                <div class="flex flex-col gap-0 text-start">
-                    <div class="text-[10px] text-zinc-400 font-body">Current bid</div>
-                    <div class="text-xs text-white font-body">0.56 <span class="text-xs text-zinc-400">SOL</span></div>
+        <div class="h-fit border-x-2 border-b-2 flex justify-between px-2 py-1">
+            <div class="flex flex-col text-start gap-0">
+                <div
+                    class="text-zinc-400 font-body text-xs font-medium flex gap-1"
+                >
+                    {sale.character}
+                    <div class="text-[10px]">
+                        #{sale.tokenId}
+                    </div>
                 </div>
-                <div class="flex flex-col gap-0 text-end">
-                    <div class="text-[10px] text-zinc-400 font-body">Ends in</div>
-                    <div class="text-xs text-white font-body"><CountDown time={sale.timerData} /></div>
+                <div class="text-white font-body font-semibold text-sm">
+                    {sale.price}
+                    <span class="text-zinc-400 font-medium text-xs">SOL</span>
                 </div>
             </div>
-        </div>
-        
-    </div>
-
-    <div class="h-fit bg-transparent border-b-2 border-x-2 flex justify-between px-2 py-2">
-        <div class="flex text-start gap-1 items-center">
-            <div class="w-7 h-7 bg-gradient-to-br from-zinc-50 to-indigo-400 "></div>
-            <div class="flex flex-col">
-                <div class="text-xs font-body text-white">0xab...b259</div>
+            <div class="flex items-center">
+                <FixbuyDialog data={sale} />
             </div>
         </div>
-        <div class="flex items-center">
-            <AuctionDialog data={sale} />
-        </div>
     </div>
-    
-</div>
 {/each}

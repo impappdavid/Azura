@@ -1,7 +1,6 @@
 <script>
   
-    import CountDown from "./countDown.svelte";
-import AuctionDialog from "./dialogs/auctionDialog.svelte";
+import AuctionDialog from "../platform/market/dialogs/auctionDialog.svelte";
 
     const nftdata = [
         {

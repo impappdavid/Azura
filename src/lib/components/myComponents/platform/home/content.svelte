@@ -8,7 +8,6 @@
     import Sidebar from "./sidebar.svelte";
     import Input from "$lib/components/ui/input/input.svelte";
     import Card from "../../market/card.svelte";
-    import FixBuyCard from "../../market/fixBuyCard.svelte";
     import def1 from "$lib/imgs/s1-0.jpg";
   import def3 from "$lib/imgs/s1-1.jpg";
   import def4 from "$lib/imgs/s1-2.jpg";

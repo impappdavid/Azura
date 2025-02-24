@@ -134,8 +134,8 @@
 <Dialog.Root>
     <Dialog.Trigger class="outline-none ">
         <Button
-            class="h-7 px-4 rounded-none bg-[#ab9ff2] text-black hover:bg-[#9587e0] text-xs font-medium"
-            >BUY</Button
+            class="h-8 px-4 rounded-lg bg-[#ab9ff2] text-white hover:bg-[#9587e0]"
+            >buy</Button
         >
     </Dialog.Trigger>
     <Dialog.Content>

@@ -7,7 +7,7 @@
     import def4 from "$lib/imgs/s1-2.jpg";
     import auro from "$lib/imgs/goldenretriver.jpg";
     import Sidebar from "./sidebar.svelte";
-    import BuyCard from "./buyCard.svelte";
+    import AuctionCard from "./auctionCard.svelte";
 
     const rarity = [
         { value: "lowtohigh", label: "Price: low to high" },
@@ -238,7 +238,7 @@
                     <div
                         class="text-xs border-2 p-1 px-2 border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md flex items-center h-fit"
                     >
-                        BUY
+                        AUCTION
                     </div>
                 </div>
 
@@ -318,7 +318,7 @@
             </div>
 
             <div class="w-full h-fit grid grid-cols-7 gap-4">
-                <BuyCard data={data} />
+                <AuctionCard data={data}/>
             </div>
         </div>
     </div>
