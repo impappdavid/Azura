@@ -190,7 +190,7 @@
                 </div>
                 <div class="text-white font-body font-semibold text-sm">
                     {sale.price}
-                    <span class="text-zinc-400 font-medium text-xs">SOL</span>
+                    <span class="text-zinc-400 font-medium text-xs">ETH</span>
                 </div>
             </div>
             <div class="flex items-center">

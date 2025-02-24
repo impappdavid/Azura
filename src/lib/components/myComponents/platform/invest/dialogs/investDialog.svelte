@@ -142,7 +142,7 @@
 <Dialog.Root>
     <Dialog.Trigger class="outline-none w-full">
         <Button
-            class="h-8 bg-[#ab9ff2] hover:bg-[#9587e0] rounded-b-xl rounded-t-none w-full text-white"
+            class="h-7 bg-[#ab9ff2] hover:bg-[#9587e0] rounded-none w-full text-black text-xs"
             >Invest now</Button
         >
     </Dialog.Trigger>

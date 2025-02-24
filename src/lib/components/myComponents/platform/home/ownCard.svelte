@@ -60,7 +60,7 @@
 </script>
 
 {#each data as nft}
-    <div
+    <a href="../../platform/home/sell/2dase231asd12"
         class="h-full max-h-[300px] w-full max-w-[280px] transition-all duration-300 ease-in-out relative  cursor-pointer group border-2"
     >
         <div class="relative overflow-hidden  h-full">
@@ -90,5 +90,5 @@
         >
             <div class="text-xs text-green-400">S1</div>
         </div>
-    </div>
+    </a>
 {/each}

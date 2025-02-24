@@ -7,7 +7,7 @@
     import def4 from "$lib/imgs/s1-2.jpg";
     import auro from "$lib/imgs/goldenretriver.jpg";
     import Sidebar from "./sidebar.svelte";
-    import AuctionCard from "./auctionCard.svelte";
+    import InvestCard from "./investCard.svelte";
 
     const rarity = [
         { value: "lowtohigh", label: "Price: low to high" },
@@ -206,7 +206,7 @@
 </script>
 
 <div
-    class="relative w-full h-screen bg-zinc-950 pt-20 pb-8 flex flex-col gap-16 transition-all ease-in-out duration-300"
+    class="relative w-full h-fit bg-zinc-950 pt-20 pb-8 flex flex-col gap-16 transition-all ease-in-out duration-300"
 >
     <!-- SVG Noise Overlay -->
     <div class="absolute inset-0 pointer-events-none opacity-10">
@@ -318,7 +318,7 @@
             </div>
 
             <div class="w-full h-fit grid grid-cols-7 gap-4">
-                <AuctionCard data={data}/>
+                <InvestCard data={data}/>
             </div>
         </div>
     </div>

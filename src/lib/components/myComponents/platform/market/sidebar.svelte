@@ -133,7 +133,7 @@
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
             <a
-                href="../../platform/home"
+                href="../../platform/invest"
                 aria-label="about us"
                 class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
                 ><svg
