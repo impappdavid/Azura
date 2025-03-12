@@ -1,5 +1,9 @@
 <script>
     import * as HoverCard from "$lib/components/ui/hover-card";
+    import { page } from "$app/stores";
+
+    // Function to check if link is active
+    const isActive = (path) => $page.url.pathname.includes(path);
 </script>
 
 <div class="flex flex-col gap-2 items-end py-4 fixed top-24">
@@ -14,7 +18,9 @@
             <a
                 href="../../platform/home"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('home') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -55,7 +61,9 @@
             <a
                 href="../../platform/market"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('market') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -98,7 +106,9 @@
             <a
                 href="../../platform/auction"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('auction') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -139,7 +149,9 @@
             <a
                 href="../../platform/invest"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('invest') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -175,7 +187,9 @@
             <a
                 href="../platform/home"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('assets') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -209,9 +223,11 @@
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
             <a
-                href="../../platform/home"
+                href="../../platform/upgrade"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('upgrade') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -247,7 +263,9 @@
             <a
                 href="../../platform/merge"
                 aria-label="about us"
-                class="text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"
+                class={isActive('merge') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -283,9 +301,11 @@
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
             <a
-                href="../../platform/home"
+                href="../../platform/generate"
                 aria-label="about us"
-                class="text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md"
+                class={isActive('generate') ? 
+                    "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
+                    "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"

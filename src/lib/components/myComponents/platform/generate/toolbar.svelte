@@ -5,6 +5,11 @@
     import { Textarea } from "$lib/components/ui/textarea";
     import * as HoverCard from "$lib/components/ui/hover-card";
     import { page } from "$app/stores";
+    import { selectedCharacterImage } from '$lib/stores/generateStore';
+    import def1 from "$lib/imgs/s1-0.jpg";
+    import def3 from "$lib/imgs/s1-1.jpg";
+    import def4 from "$lib/imgs/s1-2.jpg";
+    import auro from "$lib/imgs/goldenretriver.jpg";
 
     const rarity = [
         { value: "common", label: "Common", left: 5000 },
@@ -80,6 +85,37 @@
             state = "default";
         }, 2000); // Reset after 1 second
     };
+
+    // Test that images are loaded
+    console.log("Images loaded:", { def1, def3, def4, auro });
+
+    // Simplified characters array
+    const characters = [
+        { characterId: "kai", label: "Kai" },
+        { characterId: "lena", label: "Lena" },
+        { characterId: "noah", label: "Noah" },
+        { characterId: "auro", label: "Auro" }
+    ];
+
+    let selectedCharacter = $state("");
+
+    // Use $derived instead of $:
+    const selectedValue = $derived(selectedCharacter);
+    
+    function handleCharacterSelect(event) {
+        console.log("Selected character:", event);
+        // Update the store with the character ID
+        selectedCharacterImage.set(event);
+    }
+
+    const triggerContentCharacter = $derived(
+        characters.find((c) => c.characterId === selectedCharacter)?.label ?? "Choose Character"
+    );
+
+    // Replace the $: debug statement with $effect
+    $effect(() => {
+        console.log("selectedCharacter changed:", selectedCharacter);
+    });
 </script>
 
 <div
@@ -90,6 +126,37 @@
             <div class="text-3xl font-body">Auro</div>
 
             <div class="text-sm font-body">#0</div>
+        </div>
+        <div class="flex flex-col w-full gap-1">
+            <div class="font-body text-xs text-zinc-300 text-start">
+                Character
+            </div>
+            <Select.Root
+                type="single"
+                name="character"
+                bind:value={selectedCharacter}
+                on:change={(e) => {
+                    console.log("Select change event:", e.detail);
+                    handleCharacterSelect(e.detail);
+                }}
+            >
+                <Select.Trigger
+                    class="w-full text-white rounded-none text-xs h-8"
+                >
+                    {triggerContentCharacter}
+                </Select.Trigger>
+                <Select.Content class="rounded-none">
+                    <Select.Group>
+                        {#each characters as char}
+                            <Select.Item
+                                class="rounded-none"
+                                value={char.characterId}
+                                label={char.label}
+                            />
+                        {/each}
+                    </Select.Group>
+                </Select.Content>
+            </Select.Root>
         </div>
         <div class="flex w-full gap-2">
             <div class="flex flex-col w-full gap-1">
@@ -109,7 +176,8 @@
                     <Select.Content class="rounded-none">
                         <Select.Group>
                             {#each type as isInvestment}
-                                <Select.Item class="rounded-none"
+                                <Select.Item
+                                    class="rounded-none"
                                     value={isInvestment.valueType}
                                     label={`${isInvestment.label}`}
                                 />
@@ -131,7 +199,8 @@
                     <Select.Content class="rounded-none">
                         <Select.Group>
                             {#each rarity as rare}
-                                <Select.Item class="rounded-none"
+                                <Select.Item
+                                    class="rounded-none"
                                     value={rare.value}
                                     label={`${rare.label} (${rare.left})`}
                                 />

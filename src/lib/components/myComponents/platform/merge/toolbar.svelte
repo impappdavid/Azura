@@ -1,11 +1,9 @@
 <script>
-    import { onMount } from "svelte";
     import { Button } from "$lib/components/ui/button";
-    import * as Select from "$lib/components/ui/select";
-    import { Textarea } from "$lib/components/ui/textarea";
     import * as HoverCard from "$lib/components/ui/hover-card";
     import { page } from "$app/stores";
-    import OwnCard from "../home/ownCard.svelte";
+    import OwnCard from "./ownCard.svelte";
+    import { selectedImage1, selectedImage2 } from '$lib/stores/mergeStore';
 
     const rarity = [
         { value: "common", label: "Common", left: 5000 },
@@ -66,6 +64,8 @@
 
     let state = $state("default"); // States: 'default', 'loading', 'success'
 
+    let selectedCount = $state(0);
+
     const handleClick = async () => {
         state = "loading";
 
@@ -81,10 +81,19 @@
             state = "default";
         }, 2000); // Reset after 1 second
     };
+
+    function selectImage(imageUrl) {
+        if (!$selectedImage1) {
+            $selectedImage1 = imageUrl;
+        } else if (!$selectedImage2) {
+            $selectedImage2 = imageUrl;
+        }
+        // If both images are selected, do nothing
+    }
 </script>
 
 <div
-    class="w-full sm:h-full bg-zinc-900 sm:max-w-sm  border border-zinc-800 flex flex-col justify-between gap-4 p-4 z-50"
+    class="w-full sm:h-full bg-zinc-900 sm:max-w-md  border border-zinc-800 flex flex-col justify-between gap-4 p-4 z-50"
 >
     <div class="flex flex-col gap-4">
         <div class="flex justify-between items-center">
@@ -92,7 +101,7 @@
 
         </div>
         <div class="grid grid-cols-2 gap-2 max-h-[630px] overflow-y-scroll">
-            <OwnCard />
+            <OwnCard {selectImage} />
         </div>
     </div>
     <div class="flex flex-col gap-2">
