@@ -1,6 +1,6 @@
 <script>
     
-    import FixbuyDialog from "./dialogs/fixbuyDialog.svelte";
+    import FixbuyDialog from "../platform/market/dialogs/fixbuyDialog.svelte";
 
     const nftdata = [
         {

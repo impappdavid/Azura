@@ -216,7 +216,7 @@
 </script>
 
 <div
-  class="relative w-full font-body h-full bg-zinc-950 pt-20 flex flex-col gap-16 transition-all ease-in-out duration-300 pb-96"
+  class="relative w-full font-body h-fit bg-zinc-950 pt-20 flex flex-col gap-16 transition-all ease-in-out duration-300 pb-24"
 >
   <!-- SVG Noise Overlay -->
   <div class="absolute inset-0 pointer-events-none opacity-10">
@@ -232,15 +232,15 @@
       <rect width="100%" height="100%" filter="url(#noise)" fill="white"></rect>
     </svg>
   </div>
-  <div class="flex justify-between h-screen px-8">
+  <div class="flex justify-between h-full px-8">
     <div
-      class="flex flex-col w-full max-w-[50px] justify-between items-start animate-[slideinLeft_1s_ease-in-out] relative"
+      class="hidden sm:flex flex-col w-full max-w-[50px] justify-between items-start animate-[slideinLeft_1s_ease-in-out] relative"
     >
       <Sidebar />
     </div>
 
     <div
-      class="w-full flex flex-col font-body gap-4 py-4 px-8 animate-[reveal_3s_ease-in-out]"
+      class="w-full flex flex-col font-body gap-4 py-4 sm:px-8 animate-[reveal_3s_ease-in-out]"
     >
       <div class="flex justify-between w-full">
         <div class="flex gap-4 font-body">
@@ -251,15 +251,15 @@
           </div>
         </div>
 
-        <div class="flex gap-4 font-body">
-          <div class="text-xs text-zinc-600">LIVE DATA/</div>
-          <div class="text-xs text-zinc-400">ETH &#149; $2573.29</div>
-          <div class="text-xs text-zinc-600">/</div>
-          <div class="text-xs text-zinc-400">FLOOR PRICE &#149; $160.29</div>
+        <div class="flex gap-4 font-body items-center">
+          <div class="text-[10px] sm:text-xs text-zinc-600">LIVE DATA/</div>
+          <div class="text-[10px] sm:text-xs text-zinc-400">ETH &#149; $2573.29</div>
+          <div class="text-[10px] sm:text-xs text-zinc-600">/</div>
+          <div class="text-[10px] sm:text-xs text-zinc-400">FLOOR PRICE &#149; $160.29</div>
         </div>
       </div>
 
-      <div class="w-full grid grid-cols-2 px-8 gap-16">
+      <div class="w-full flex flex-col sm:grid grid-cols-2 sm:px-8 gap-16">
         <div class="w-full">
           <img
             src={auro}
@@ -399,7 +399,7 @@
               Make changes to your account here.
             </Tabs.Content>
             <Tabs.Content value="prompts" class="border-2  gap-4">
-              <div class="grid grid-cols-2 gap-4 p-4">
+              <div class="grid sm:grid-cols-2 gap-4 p-4">
                 <div class="">
                   <div class="">Background</div>
                   <div class="bg-zinc-800/50 p-2 text-sm text-zinc-400">

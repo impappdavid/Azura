@@ -219,7 +219,7 @@
 </script>
 
 <div
-    class="relative w-full h-screen bg-zinc-950 pt-20 pb-8 flex flex-col gap-16 transition-all ease-in-out duration-300"
+    class="relative w-full h-fit min-h-screen bg-zinc-950 pt-20 pb-24 flex flex-col gap-16 transition-all ease-in-out duration-300 "
 >
     <!-- SVG Noise Overlay -->
     <div class="absolute inset-0 pointer-events-none opacity-10">
@@ -236,15 +236,15 @@
             ></rect>
         </svg>
     </div>
-    <div class="flex justify-between h-screen px-8">
+    <div class="flex justify-between h-full px-4 sm:px-8">
         <div
-            class="flex flex-col w-full max-w-[50px] justify-between items-start animate-[slideinLeft_1s_ease-in-out] relative"
+            class="hidden xl:flex flex-col w-full max-w-[50px] justify-between items-start animate-[slideinLeft_1s_ease-in-out] relative"
         >
             <Sidebar />
         </div>
 
         <div
-            class="w-full flex flex-col font-body gap-4 py-4 px-4 animate-[reveal_3s_ease-in-out]"
+            class="w-full flex flex-col font-body gap-4 py-4 sm:px-4 animate-[reveal_3s_ease-in-out]"
         >
             <div class="flex justify-between w-full">
                 <div class="flex gap-4 font-body">
@@ -296,13 +296,9 @@
                     >
                         LATEST
                     </div>
-                    <div
-                        class="text-xs border-2 p-1 px-2 flex items-center justify-center text-zinc-400 backdrop-blur-md hover:border-[#9487e0b2] hover:text-[#ab9ff2] cursor-pointer transition-all"
-                    >
-                        SORT BY RARITY
-                    </div>
+                    
                 </div>
-                <div class="relative w-full max-w-64 flex items-center">
+                <div class="relative w-full max-w-32 sm:max-w-64 flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -323,7 +319,7 @@
                 
             </div>
 
-            <div class="w-full h-full grid grid-cols-7 gap-4">
+            <div class="w-full h-full grid grid-cols-2  sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-4">
                 <OwnCard />
             </div>
         </div>

@@ -11,7 +11,7 @@
         <Sheet.Root>
             <Sheet.Trigger class="bg-transparent outline-none ">
                 <div
-                    class="text-xs border-2 p-1 px-2 border-zinc-600 text-zinc-400 transition-all ease-in-out duration-300 w-fit max-w-[100px] backdrop-blur-md"
+                    class="text-[10px] sm:text-xs border-2 p-1 px-2 border-zinc-600 text-zinc-400 transition-all ease-in-out duration-300 w-fit max-w-[100px] backdrop-blur-md"
                 >
                     OPEN MENU
                 </div>
@@ -69,25 +69,21 @@
         <img
             src={icon10}
             alt="asd"
-            class="w-8 h-8 animate-[slideinLeft_1s_ease-in-out]"
+            class="w-8 h-8 hidden sm:flex animate-[slideinLeft_1s_ease-in-out]"
         />
         <div
-            class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md flex items-center"
+            class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md hidden sm:flex items-center"
         >
             /PLATFROM/HOME
         </div>
-        <img
-            src={icon10}
-            alt="asd"
-            class="w-8 h-8 animate-[slideinLeft_1s_ease-in-out]"
-        />
+       
         <div
-            class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md flex items-center"
+            class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md hidden sm:flex items-center"
         >
             TOTAL NFTS / 6
         </div>
         <div
-            class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md flex items-center"
+            class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md hidden sm:flex items-center"
         >
             TOTAL ASSETS / 0
         </div>
