@@ -7,10 +7,9 @@
     import auro from "$lib/imgs/goldenretriver.jpg";
 
     import { page } from '$app/stores';
-    import Canvas from "$lib/components/myComponents/platform/generate/canvas.svelte";
-    import Toolbar from "$lib/components/myComponents/platform/generate/toolbar.svelte";
+    import Canvas from "$lib/components/myComponents/platform/upgrade/canvas.svelte";
+    import Toolbar from "$lib/components/myComponents/platform/upgrade/toolbar.svelte";
     import Sidebar from "$lib/components/myComponents/platform/sidebar.svelte";
-    import { selectedCharacterImage } from '$lib/stores/generateStore';
 
    
 
@@ -46,8 +45,8 @@
         >
             <Sidebar />
         </div>
-        <Canvas />
-        <Toolbar />
+        <Canvas imageUrl={auro}/>
+        <Toolbar/>
     </div>
 </div>
 
