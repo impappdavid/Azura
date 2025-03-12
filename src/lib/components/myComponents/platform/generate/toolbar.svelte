@@ -83,11 +83,11 @@
 </script>
 
 <div
-    class="w-full sm:h-full bg-zinc-900 sm:max-w-sm rounded-2xl border border-zinc-800 flex flex-col justify-between gap-4 p-4 z-50"
+    class="w-full sm:h-full bg-zinc-900 sm:max-w-sm  border border-zinc-800 flex flex-col justify-between gap-4 p-4 z-50"
 >
     <div class="flex flex-col gap-4">
         <div class="flex justify-between items-center">
-            <div class="text-3xl font-logo">{activeName}</div>
+            <div class="text-3xl font-body">Auro</div>
 
             <div class="text-sm font-body">#0</div>
         </div>
@@ -102,14 +102,14 @@
                     bind:value={valueType}
                 >
                     <Select.Trigger
-                        class="w-full text-white rounded-full text-xs h-8"
+                        class="w-full text-white rounded-none text-xs h-8"
                     >
                         {triggerContentType}
                     </Select.Trigger>
-                    <Select.Content>
+                    <Select.Content class="rounded-none">
                         <Select.Group>
                             {#each type as isInvestment}
-                                <Select.Item
+                                <Select.Item class="rounded-none"
                                     value={isInvestment.valueType}
                                     label={`${isInvestment.label}`}
                                 />
@@ -124,14 +124,14 @@
                 </div>
                 <Select.Root type="single" name="favoriteFruit" bind:value>
                     <Select.Trigger
-                        class="w-full text-white rounded-full text-xs h-8"
+                        class="w-full text-white rounded-none text-xs h-8"
                     >
                         {triggerContent}
                     </Select.Trigger>
-                    <Select.Content>
+                    <Select.Content class="rounded-none">
                         <Select.Group>
                             {#each rarity as rare}
-                                <Select.Item
+                                <Select.Item class="rounded-none"
                                     value={rare.value}
                                     label={`${rare.label} (${rare.left})`}
                                 />
@@ -147,7 +147,7 @@
                 <div class="font-body text-xs text-zinc-300 text-start">
                     Background
                 </div>
-                <Textarea
+                <Textarea class="rounded-none"
                     placeholder="Sunset over a calm ocean with golden and purple skies."
                 />
             </div>
@@ -159,7 +159,7 @@
                 <div class="font-body text-xs text-zinc-300 text-start">
                     Outfit
                 </div>
-                <Textarea
+                <Textarea class="rounded-none"
                     placeholder="Casual streetwear with a hoodie, jeans, and sneakers."
                 />
             </div>
@@ -171,7 +171,7 @@
                 <div class="font-body text-xs text-zinc-300 text-start">
                     Accessories
                 </div>
-                <Textarea
+                <Textarea class="rounded-none"
                     placeholder="Simple silver watch and black sunglasses."
                 />
             </div>
@@ -183,7 +183,7 @@
                 <div class="font-body text-xs text-zinc-300 text-start">
                     Face expression
                 </div>
-                <Textarea placeholder="Relaxed with a subtle smile." />
+                <Textarea class="rounded-none" placeholder="Relaxed with a subtle smile." />
             </div>
         </div>
         {/if}
@@ -192,7 +192,7 @@
         {#if !value}
         <Button
             disabled
-            class="w-full bg-[#9587e0] font-body rounded-xl hover:bg-[#9487e0b4] flex text-white"
+            class="w-full bg-[#9587e0] font-body rounded-none hover:bg-[#9487e0b4] flex text-white"
         >
             {#if value && iValue == "normal"}
                 Mint for {value == "common"
@@ -235,7 +235,7 @@
         </Button>
         {:else}
             <Button
-            class="w-full bg-[#9587e0] font-body rounded-xl hover:bg-[#9487e0b4] flex text-white"
+            class="w-full bg-[#9587e0] font-body rounded-none hover:bg-[#9487e0b4] flex text-white"
         >
             {#if value && valueType == "normal"}
                 Mint for {value == "common"
@@ -279,11 +279,11 @@
         </Button>
         {/if}
         <Button
-            class="w-full bg-white text-black font-body rounded-xl hover:bg-white/80 flex gap-1 "
+            class="w-full bg-white text-black font-body rounded-none hover:bg-white/80 flex gap-1 "
             >Generate Your NFT</Button
         >
         <div
-            class="flex justify-between items-center bg-zinc-800/50 border drop-shadow-md p-2 rounded-xl"
+            class="flex justify-between items-center bg-zinc-800/50 border drop-shadow-md p-2 "
         >
             <div class="flex gap-2 items-center">
                 <svg
@@ -315,7 +315,7 @@
                             class="group font-medium tracking-wide font-body text-sm px-3  py-1.5 rounded-full transition-all cursor-default flex items-center"
                         >
                             <Button
-                                class="text-xs rounded-xl bg-[#9587e0] hover:bg-[#9487e0b4] text-white"
+                                class="text-xs rounded-none bg-[#9587e0] hover:bg-[#9487e0b4] text-white"
                                 disabled>Claim 10</Button
                             >
                         </HoverCard.Trigger>
@@ -329,7 +329,7 @@
                     </HoverCard.Root>
                 {:else}
                     <Button
-                        class="text-xs rounded-xl bg-[#9587e0] hover:bg-[#9487e0b4] text-white py-2 px-4 w-20"
+                        class="text-xs rounded-none bg-[#9587e0] hover:bg-[#9487e0b4] text-white py-2 px-4 w-20"
                         onclick={handleClick}
                     >
                         {#if state === "loading"}

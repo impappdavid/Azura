@@ -1,13 +1,15 @@
 <script>
-    import Navbar from "$lib/components/myComponents/navbar.svelte";
+    import Navbar from "$lib/components/myComponents/platform/navbar.svelte";
+    
     import def1 from "$lib/imgs/s1-0.jpg";
     import def3 from "$lib/imgs/s1-1.jpg";
     import def4 from "$lib/imgs/s1-2.jpg";
     import auro from "$lib/imgs/goldenretriver.jpg";
 
     import { page } from '$app/stores';
-    import Canvas from "$lib/components/myComponents/generate/canvas.svelte";
-    import Toolbar from "$lib/components/myComponents/generate/toolbar.svelte";
+    import Canvas from "$lib/components/myComponents/platform/generate/canvas.svelte";
+    import Toolbar from "$lib/components/myComponents/platform/generate/toolbar.svelte";
+    import Sidebar from "$lib/components/myComponents/platform/generate/sidebar.svelte";
 
    
 
@@ -38,7 +40,12 @@
     
 
     <div class="absolute inset-0 flex sm:flex-row flex-col gap-2 pt-16 pb-4 px-2 ">
-        <Canvas imageUrl={imageUrl}/>
+        <div
+            class="hidden xl:flex flex-col w-full max-w-[50px] justify-between items-start animate-[slideinLeft_1s_ease-in-out] relative"
+        >
+            <Sidebar />
+        </div>
+        <Canvas imageUrl={auro}/>
         <Toolbar/>
     </div>
 </div>

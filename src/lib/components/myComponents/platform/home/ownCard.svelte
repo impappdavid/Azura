@@ -61,7 +61,7 @@
 
 {#each data as nft}
     <a href="../../platform/home/sell/2dase231asd12"
-        class="h-full max-h-[300px] w-full max-w-[280px] transition-all duration-300 ease-in-out relative  cursor-pointer group border-2"
+        class="h-[340px] w-full max-w-[280px] transition-all duration-300 ease-in-out relative  cursor-pointer group border-2"
     >
         <div class="relative overflow-hidden  h-full">
             <img

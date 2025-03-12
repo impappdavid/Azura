@@ -1,13 +1,7 @@
 <script>
-    import icon38 from "$lib/imgs/icons/icon38.png";
-    import icon38Flip from "$lib/imgs/icons/icon38Flip.png";
-    import icon38Mirror from "$lib/imgs/icons/icon38Mirror.png";
-    import icon38MirrorTop from "$lib/imgs/icons/icon38MirrorTop.png";
-    import icon22 from "$lib/imgs/icons/icon22.png";
-    import icon22Right from "$lib/imgs/icons/icon22Right.png";
+    
     import Sidebar from "./sidebar.svelte";
     import Input from "$lib/components/ui/input/input.svelte";
-    import Card from "../../market/card.svelte";
     import def1 from "$lib/imgs/s1-0.jpg";
   import def3 from "$lib/imgs/s1-1.jpg";
   import def4 from "$lib/imgs/s1-2.jpg";
