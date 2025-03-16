@@ -202,7 +202,7 @@
         </div>
 
         <div
-            class="h-fit bg-transparent border-b-2 border-x-2 flex justify-between px-2 py-2"
+            class="h-fit bg-zinc-900 border-y-2 border-x-2 flex justify-between px-2 py-2 "
         >
             <div class="flex text-start items-center gap-1 justify-center">
                 <div class="text-lg">{sale.character}</div>

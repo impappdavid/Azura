@@ -6,7 +6,7 @@
     import def3 from "$lib/imgs/s1-1.jpg";
     import def4 from "$lib/imgs/s1-2.jpg";
     import auro from "$lib/imgs/goldenretriver.jpg";
-    import Sidebar from "./sidebar.svelte";
+    import Sidebar from "../sidebar.svelte";
     import InvestCard from "./investCard.svelte";
 
     const rarity = [

@@ -178,7 +178,7 @@
         >
             <div class="text-xs text-green-400">S1</div>
         </div>
-        <div class="h-fit border-x-2 border-b-2 flex justify-between px-2 py-1">
+        <div class="h-fit border-x-2 border-b-2 flex justify-between px-2 py-1 bg-zinc-900">
             <div class="flex flex-col text-start gap-0">
                 <div
                     class="text-zinc-400 font-body text-xs font-medium flex gap-1"
@@ -190,7 +190,7 @@
                 </div>
                 <div class="text-white font-body font-semibold text-sm">
                     {sale.price}
-                    <span class="text-zinc-400 font-medium text-xs">ETH</span>
+                    <span class="text-zinc-400 font-medium text-xs">SOL</span>
                 </div>
             </div>
             <div class="flex items-center">

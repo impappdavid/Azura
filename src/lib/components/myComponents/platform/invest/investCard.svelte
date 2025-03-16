@@ -179,7 +179,7 @@
             <div class="text-xs text-green-400">S1</div>
         </div>
 
-        <div class="h-fit bg-transparent border-x-2 flex flex-col gap-1 px-3 py-2 text-start">
+        <div class="h-fit bg-zinc-900 border-x-2 flex flex-col gap-1 px-3 py-2 text-start">
             
             <div class="flex gap-1 items-center">
                 <div class="font-body font-medium text-white">Kai</div>

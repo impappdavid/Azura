@@ -1,6 +1,6 @@
 <script>
   import * as Tabs from "$lib/components/ui/tabs";
-  import Sidebar from "../sidebar.svelte";
+  import Sidebar from "../../sidebar.svelte";
   import Input from "$lib/components/ui/input/input.svelte";
   import def1 from "$lib/imgs/s1-0.jpg";
   import def3 from "$lib/imgs/s1-1.jpg";
