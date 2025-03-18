@@ -1,6 +1,7 @@
 <script>
     import DottedPattern from "./dottedPattern.svelte";
     import { selectedCharacterImage } from '$lib/stores/generateStore';
+    import auro from "../../../../imgs/goldenretriver.jpg"
 
     // Map of character IDs to their image paths
     const characterImages = {
@@ -29,17 +30,12 @@
     <DottedPattern
         class="[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)] z-0 w-full h-full"
     />
-    {#if currentImage}
         <img 
-            src={currentImage} 
+            src={auro} 
             alt="Selected character" 
             class="absolute w-full h-full max-w-[700px] max-h-[700px] border-4 border-zinc-600 z-50 object-cover"
         />
-    {:else}
-        <div class="absolute w-full h-full max-w-[700px] bg-zinc-900/50 backdrop-blur-sm max-h-[700px] border-4 border-zinc-600 z-50 flex items-center justify-center text-zinc-400 font-body">
-            Select a character to begin
-        </div>
-    {/if}
+        
 </div>
 
 

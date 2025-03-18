@@ -62,7 +62,7 @@
                             Current bid
                         </div>
                         <div class="text-xs text-white font-body">
-                            0.56 <span class="text-xs text-zinc-300">ETH</span>
+                            0.56 <span class="text-xs text-zinc-300">SOL</span>
                         </div>
                     </div>
                     <div class="flex flex-col gap-0 text-end">

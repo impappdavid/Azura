@@ -69,7 +69,7 @@
                         Invest price
                     </div>
                     <div class="text-xs text-white font-body">
-                        0.25 <span class="text-xs text-zinc-400">ETH</span>
+                        0.25 <span class="text-xs text-zinc-400">SOL</span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-0 text-end">
