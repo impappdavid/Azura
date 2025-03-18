@@ -10,18 +10,17 @@
     <!--Home-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../../platform/home"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/home"
+            <div
                 aria-label="about us"
                 class={isActive('home') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -32,15 +31,13 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-home"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M5 12l-2 0l9 -9l9 9l-2 0"
-                    /><path
-                        d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
-                    /><path
-                        d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
-                    /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -53,18 +50,17 @@
     <!--Market-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../../platform/market"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/market"
+            <div
                 aria-label="about us"
                 class={isActive('market') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -75,17 +71,15 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-building-store"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M3 21l18 0"
-                    /><path
-                        d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"
-                    /><path d="M5 21l0 -10.15" /><path
-                        d="M19 21l0 -10.15"
-                    /><path
-                        d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"
-                    /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 21l18 0" />
+                    <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
+                    <path d="M5 21l0 -10.15" />
+                    <path d="M19 21l0 -10.15" />
+                    <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -98,18 +92,18 @@
     <!--Auction-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
+            href="../../platform/auction"
             target="_blank"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/auction"
+            <div
                 aria-label="about us"
                 class={isActive('auction') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -120,15 +114,15 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-gavel"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385"
-                    /><path d="M6 9l4 4" /><path d="M13 10l-4 -4" /><path
-                        d="M3 21h7"
-                    /><path
-                        d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z"
-                    /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" />
+                    <path d="M6 9l4 4" />
+                    <path d="M13 10l-4 -4" />
+                    <path d="M3 21h7" />
+                    <path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -141,18 +135,17 @@
     <!--Invest-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../../platform/invest"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/invest"
+            <div
                 aria-label="about us"
                 class={isActive('invest') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -163,11 +156,12 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-chart-line"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M4 19l16 0"
-                    /><path d="M4 15l4 -6l4 2l4 -5l4 4" /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 19l16 0" />
+                    <path d="M4 15l4 -6l4 2l4 -5l4 4" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -179,18 +173,17 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../platform/assets"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../platform/home"
+            <div
                 aria-label="about us"
                 class={isActive('assets') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -201,11 +194,11 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-shirt"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M15 4l6 2v5h-3v8a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-8h-3v-5l6 -2a3 3 0 0 0 6 0"
-                    /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 4l6 2v5h-3v8a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-8h-3v-5l6 -2a3 3 0 0 0 6 0" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -217,18 +210,17 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../../platform/upgrade"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/upgrade"
+            <div
                 aria-label="about us"
                 class={isActive('upgrade') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -239,11 +231,11 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-badge-up"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M17 11v6l-5 -4l-5 4v-6l5 -4z"
-                    /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M17 11v6l-5 -4l-5 4v-6l5 -4z" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -255,18 +247,17 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../../platform/merge"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/merge"
+            <div
                 aria-label="about us"
                 class={isActive('merge') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -277,13 +268,13 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-layers-intersect-2"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"
-                    /><path
-                        d="M4 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"
-                    /><path d="M9 15l6 -6" /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                    <path d="M4 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                    <path d="M9 15l6 -6" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
@@ -295,18 +286,17 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="https://github.com/sveltejs"
-            target="_blank"
+            href="../../platform/generate"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
-            <a
-                href="../../platform/generate"
+            <div
                 aria-label="about us"
                 class={isActive('generate') ? 
                     "text-xs border-2 p-1 w-8 h-8 flex items-center justify-center border-[#9487e0b2] text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md" :
                     "text-xs hover:border-2 p-1 w-8 h-8 flex items-center justify-center text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] backdrop-blur-md"}
-                ><svg
+            >
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="18"
@@ -317,17 +307,16 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-photo-ai"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M15 8h.01"
-                    /><path
-                        d="M10 21h-4a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5"
-                    /><path
-                        d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l1 1"
-                    /><path d="M14 21v-4a2 2 0 1 1 4 0v4" /><path
-                        d="M14 19h4"
-                    /><path d="M21 15v6" /></svg
                 >
-            </a>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 8h.01" />
+                    <path d="M10 21h-4a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5" />
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l1 1" />
+                    <path d="M14 21v-4a2 2 0 1 1 4 0v4" />
+                    <path d="M14 19h4" />
+                    <path d="M21 15v6" />
+                </svg>
+            </div>
         </HoverCard.Trigger>
         <HoverCard.Content
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
