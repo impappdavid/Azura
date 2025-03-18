@@ -1,6 +1,4 @@
-<script>
-    import icon40 from "$lib/imgs/icons/icon40.png";
-</script>
+
 
 <div class="text-xl sm:text-3xl w-fit flex gap-8 font-body">
     <div class="text-zinc-400 text-sm">/2025-04-05/</div>

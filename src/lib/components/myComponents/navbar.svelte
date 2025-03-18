@@ -3,7 +3,6 @@
     import icon8 from "$lib/imgs/icons/icon8.png";
     import icon19 from "$lib/imgs/icons/icon19.png";
     import icon40 from "$lib/imgs/icons/icon40.png";
-    import hamburger from "$lib/imgs/icons/hamburger.png";
 </script>
 
 <nav class="flex w-full p-4 justify-between items-center fixed top-0 z-50">

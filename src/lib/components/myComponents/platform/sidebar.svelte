@@ -10,7 +10,7 @@
     <!--Home-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/home"
+            href="../../../platform/home"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -50,7 +50,7 @@
     <!--Market-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/market"
+            href="../../../platform/market"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -92,8 +92,7 @@
     <!--Auction-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/auction"
-            target="_blank"
+            href="../../../platform/auction"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -135,7 +134,7 @@
     <!--Invest-->
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/invest"
+            href="../../../platform/invest"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -173,7 +172,6 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../platform/assets"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -204,13 +202,13 @@
             class="w-fit px-2 py-1 border-[#9487e0b2] text-[#ab9ff2]"
             side="right"
         >
-            <div class="flex justify-between space-x-4 text-sm">Assets</div>
+            <div class="flex justify-between space-x-4 text-sm">Soon</div>
         </HoverCard.Content>
     </HoverCard.Root>
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/upgrade"
+            href="../../../platform/upgrade"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -247,7 +245,7 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/merge"
+            href="../../../platform/merge"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >
@@ -286,7 +284,7 @@
 
     <HoverCard.Root openDelay={0} closeDelay={0}>
         <HoverCard.Trigger
-            href="../../platform/generate"
+            href="../../../platform/generate"
             rel="noreferrer noopener"
             class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
         >

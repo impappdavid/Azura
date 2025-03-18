@@ -1,5 +1,4 @@
 <script>
-    import { onMount } from "svelte";
     import { Button } from "$lib/components/ui/button";
     import * as Select from "$lib/components/ui/select";
     import { Textarea } from "$lib/components/ui/textarea";

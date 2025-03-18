@@ -1,7 +1,6 @@
 <script>
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
-    import * as HoverCard from "$lib/components/ui/hover-card";
   
     let data = [
       { date: '2025-03-10', price: 0.58 },
@@ -27,8 +26,6 @@
       { date: '2025-03-30', price: 10.46 },
     ];
   
-    let hoverData = null;
-    let hoverCardPosition = { top: 0, left: 0 }; // Position for the hover card
     let verticalLine = null; // Variable to hold the vertical line
   
     let chartContainer;

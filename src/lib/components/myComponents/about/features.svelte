@@ -1,8 +1,5 @@
 <script>
-    import icon38 from "$lib/imgs/icons/icon38.png";
-    import icon38Flip from "$lib/imgs/icons/icon38Flip.png";
-    import icon38Mirror from "$lib/imgs/icons/icon38Mirror.png";
-    import icon38MirrorTop from "$lib/imgs/icons/icon38MirrorTop.png";
+  
     import icon22 from "$lib/imgs/icons/icon22.png";
     import icon22Right from "$lib/imgs/icons/icon22Right.png";
 </script>

@@ -1,8 +1,6 @@
 <script>
     import * as Sheet from "$lib/components/ui/sheet/index.js";
-    import icon44 from "$lib/imgs/icons/icon44.png";
     import icon10 from "$lib/imgs/icons/icon10.png";
-    import icon19 from "$lib/imgs/icons/icon19.png";
     import icon40 from "$lib/imgs/icons/icon40.png";
 </script>
 

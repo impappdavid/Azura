@@ -1,6 +1,4 @@
 <script>
-    
-
     import Input from "$lib/components/ui/input/input.svelte";
     import def1 from "$lib/imgs/s1-0.jpg";
     import def3 from "$lib/imgs/s1-1.jpg";
@@ -9,11 +7,6 @@
     import Sidebar from "../sidebar.svelte";
     import AuctionCard from "./auctionCard.svelte";
 
-    const rarity = [
-        { value: "lowtohigh", label: "Price: low to high" },
-        { value: "hightolow", label: "Price: high to low" },
-        { value: "recentlylisted", label: "Recently listed" },
-    ];
 
     const data = [
         {

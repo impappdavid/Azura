@@ -1,130 +1,6 @@
 <script>
+    import { Button } from "$lib/components/ui/button";
     import CountDown from "./countDown.svelte";
-    import AuctionDialog from "./dialogs/auctionDialog.svelte";
-
-    const nftdata = [
-        {
-            price: 2.45,
-            from: "0n23x2734",
-            updated: "9m",
-            expiresin: "29d",
-        },
-        {
-            price: 2.13,
-            from: "0h75x5872",
-            updated: "15m",
-            expiresin: "29d",
-        },
-        {
-            price: 2.04,
-            from: "0q12x9nh2",
-            updated: "20d",
-            expiresin: "9d",
-        },
-        {
-            price: 1.99,
-            from: "0u23x9m12",
-            updated: "34m",
-            expiresin: "5d",
-        },
-        {
-            price: 2.73,
-            from: "0a1bx2c3d",
-            updated: "12m",
-            expiresin: "27d",
-        },
-        {
-            price: 1.89,
-            from: "0e4fx5a6b",
-            updated: "4h",
-            expiresin: "15d",
-        },
-        {
-            price: 2.34,
-            from: "0c7dx8e9f",
-            updated: "32m",
-            expiresin: "22d",
-        },
-        {
-            price: 1.55,
-            from: "0g1hx2i3j",
-            updated: "7m",
-            expiresin: "38d",
-        },
-        {
-            price: 2.67,
-            from: "0k4lx5m6n",
-            updated: "23m",
-            expiresin: "30d",
-        },
-        {
-            price: 1.73,
-            from: "0o7px8q9r",
-            updated: "2h",
-            expiresin: "18d",
-        },
-        {
-            price: 2.95,
-            from: "0s1tx2u3v",
-            updated: "45m",
-            expiresin: "40d",
-        },
-        {
-            price: 2.1,
-            from: "0w4xx5y6z",
-            updated: "6m",
-            expiresin: "12d",
-        },
-        {
-            price: 1.99,
-            from: "0a8bx9c0d",
-            updated: "15m",
-            expiresin: "20d",
-        },
-        {
-            price: 2.82,
-            from: "0e1fx2g3h",
-            updated: "10m",
-            expiresin: "25d",
-        },
-        {
-            price: 1.67,
-            from: "0i4jx5k6l",
-            updated: "1h",
-            expiresin: "10d",
-        },
-    ];
-
-    const activity = [
-        {
-            type: "list",
-            price: 3.49,
-            owner: "0n23x2734",
-            date: "2025/01/26",
-            buyer: "-",
-        },
-        {
-            type: "sale",
-            price: 2.49,
-            owner: "0n23x2734",
-            date: "2025/01/26",
-            buyer: "0n23x2734",
-        },
-        {
-            type: "list",
-            price: 2.49,
-            owner: "0n23x2734",
-            date: "2025/01/26",
-            buyer: "-",
-        },
-        {
-            type: "mint",
-            price: 1,
-            owner: "0x00",
-            date: "2025/01/26",
-            buyer: "0n23x2734",
-        },
-    ];
 
     export let data;
 </script>
@@ -209,7 +85,11 @@
                 <div class="text-xs text-zinc-400">#{sale.tokenId}</div>
             </div>
             <div class="flex items-center">
-                <AuctionDialog data={sale} />
+                <Button
+                    onclick={() => window.location.href = '/platform/auction/randomid'}
+                    class="h-7 px-4 rounded-none bg-[#ab9ff2] text-black hover:bg-[#9587e0] text-xs font-medium"
+                    >BUY</Button
+                >
             </div>
         </div>
     </div>

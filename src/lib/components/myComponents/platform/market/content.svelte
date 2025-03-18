@@ -9,11 +9,6 @@
     import Sidebar from "../sidebar.svelte";
     import BuyCard from "./buyCard.svelte";
 
-    const rarity = [
-        { value: "lowtohigh", label: "Price: low to high" },
-        { value: "hightolow", label: "Price: high to low" },
-        { value: "recentlylisted", label: "Recently listed" },
-    ];
 
     const data = [
         {

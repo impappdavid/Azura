@@ -11,14 +11,18 @@
     };
 
     // Get the current image path based on selected character
-    const currentImage = $derived(
-        $selectedCharacterImage ? characterImages[$selectedCharacterImage] : null
-    );
+    let currentImage;
+    $: currentImage = selectedCharacterImage ? characterImages[selectedCharacterImage] : null;
 
-    $effect(() => {
-        console.log("Current character:", $selectedCharacterImage);
-        console.log("Current image path:", currentImage);
-    });
+    $: console.log("Current character:", selectedCharacterImage);
+    $: console.log("Current image path:", currentImage);
+    $: console.log("Available character images:", characterImages);
+
+    function handleCharacterSelect(event) {
+        console.log("Selected character:", event);
+        // Update the store with the character ID
+        selectedCharacterImage.set(event);
+    }
 </script>
 
 <div class="w-full max-w-12/12 h-full flex justify-center items-center relative">
@@ -32,7 +36,7 @@
             class="absolute w-full h-full max-w-[700px] max-h-[700px] border-4 border-zinc-600 z-50 object-cover"
         />
     {:else}
-        <div class="absolute w-full h-full max-w-[700px] max-h-[700px] border-4 border-zinc-600 z-50 flex items-center justify-center text-zinc-400 font-body">
+        <div class="absolute w-full h-full max-w-[700px] bg-zinc-900/50 backdrop-blur-sm max-h-[700px] border-4 border-zinc-600 z-50 flex items-center justify-center text-zinc-400 font-body">
             Select a character to begin
         </div>
     {/if}
