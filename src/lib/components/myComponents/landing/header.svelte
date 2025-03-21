@@ -9,7 +9,7 @@
 </script>
 
 <div
-    class="relative w-full h-screen bg-zinc-950 pt-20 pb-8 flex flex-col gap-16 transition-all ease-in-out duration-300"
+    class="relative w-full h-full bg-zinc-950 pt-20 pb-8 flex flex-col gap-16 transition-all ease-in-out duration-300"
 >
     <!-- SVG Noise Overlay -->
     <div class="absolute inset-0 pointer-events-none opacity-10">

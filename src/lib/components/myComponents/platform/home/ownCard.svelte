@@ -57,7 +57,7 @@
         },
     ];
 
-    const rarityColors: Object = {
+    const rarityColors: { [key: string]: string } = {
         common: "bg-zinc-900/30",
         uncommon: "bg-green-500/30",
         rare: "bg-blue-500/30",

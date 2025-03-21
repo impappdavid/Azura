@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
     import { onDestroy, onMount } from "svelte";
 
     export let time = { hours: 0, minutes: 0, seconds: 10 };
 
-    let interval;
+    let interval :any;
     let hours = time.hours;
     let minutes = time.minutes;
     let seconds = time.seconds;

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import DottedPattern from "./dottedPattern.svelte";
     import { selectedCharacterImage } from '$lib/stores/generateStore';
     import auro from "../../../../imgs/goldenretriver.jpg"
@@ -19,7 +19,7 @@
     $: console.log("Current image path:", currentImage);
     $: console.log("Available character images:", characterImages);
 
-    function handleCharacterSelect(event) {
+    function handleCharacterSelect(event:any) {
         console.log("Selected character:", event);
         // Update the store with the character ID
         selectedCharacterImage.set(event);

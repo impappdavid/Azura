@@ -1,6 +1,7 @@
 <script>
     import DottedPattern from "./dottedPattern.svelte";
-    import { selectedImage1, selectedImage2 } from '$lib/stores/mergeStore';
+    import { selectedImage1, selectedImage2 } from "$lib/stores/mergeStore";
+    import Button from "$lib/components/ui/button/button.svelte";
 
     function removeImage(imageNumber) {
         if (imageNumber === 1) {
@@ -15,9 +16,11 @@
     <DottedPattern
         class="[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)] z-0 w-full h-full"
     />
-    <div class="z-50 flex sm:flex-row flex-col gap-8 items-center justify-center">
+    <div
+        class="z-50 flex sm:flex-row flex-col gap-8 items-center justify-center"
+    >
         {#if $selectedImage1}
-            <div 
+            <div
                 class="relative group cursor-pointer"
                 on:click={() => removeImage(1)}
             >
@@ -26,10 +29,14 @@
                     alt="First NFT"
                     class="w-full h-full max-w-[500px] max-h-[500px] border-2 border-zinc-600 z-50 transition-all duration-300"
                 />
-                <div class="absolute inset-0 bg-red-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div
+                    class="absolute inset-0 bg-red-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
             </div>
         {:else}
-            <div class="w-full h-full text-md text-xs sm:min-w-[500px] max-w-[500px] sm:min-h-[500px] max-h-[500px] border-2 border-zinc-600 backdrop-blur-sm bg-zinc-600/50 z-50 font-body flex justify-center items-center">
+            <div
+                class="w-full h-full text-md text-xs sm:min-w-[500px] max-w-[500px] sm:min-h-[500px] max-h-[500px] border-2 border-zinc-600 backdrop-blur-sm bg-zinc-600/50 z-50 font-body flex justify-center items-center"
+            >
                 Select first NFT
             </div>
         {/if}
@@ -47,7 +54,7 @@
         </svg>
 
         {#if $selectedImage2}
-            <div 
+            <div
                 class="relative group cursor-pointer"
                 on:click={() => removeImage(2)}
             >
@@ -56,10 +63,14 @@
                     alt="Second NFT"
                     class="w-full h-full max-w-[500px] max-h-[500px] border-2 border-zinc-600 z-50 transition-all duration-300"
                 />
-                <div class="absolute inset-0 bg-red-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div
+                    class="absolute inset-0 bg-red-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
             </div>
         {:else}
-            <div class="w-full h-full text-md text-xs sm:min-w-[500px] max-w-[500px] sm:min-h-[500px] max-h-[500px] border-2 border-zinc-600 backdrop-blur-sm bg-zinc-600/50 z-50 font-body flex justify-center items-center">
+            <div
+                class="w-full h-full text-md text-xs sm:min-w-[500px] max-w-[500px] sm:min-h-[500px] max-h-[500px] border-2 border-zinc-600 backdrop-blur-sm bg-zinc-600/50 z-50 font-body flex justify-center items-center"
+            >
                 Select second NFT
             </div>
         {/if}
