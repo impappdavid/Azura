@@ -1,38 +1,34 @@
-<script lang="ts">
+<script>
   import { onMount } from "svelte";
   import * as d3 from "d3";
 
-  interface DataPoint {
-    date: Date;
-    price: number;
-  }
-
-  let data: DataPoint[] = [
-    { date: new Date("2025-03-10"), price: 0.58 },
-    { date: new Date("2025-03-11"), price: 0.93 },
-    { date: new Date("2025-03-12"), price: 5.23 },
-    { date: new Date("2025-03-13"), price: 4.8 },
-    { date: new Date("2025-03-14"), price: 3.2 },
-    { date: new Date("2025-03-15"), price: 0.46 },
-    { date: new Date("2025-03-16"), price: 1.5 },
-    { date: new Date("2025-03-17"), price: 1.67 },
-    { date: new Date("2025-03-18"), price: 0.46 },
-    { date: new Date("2025-03-19"), price: 0.86 },
-    { date: new Date("2025-03-20"), price: 0.12 },
-    { date: new Date("2025-03-21"), price: 0.27 },
-    { date: new Date("2025-03-22"), price: 0.9 },
-    { date: new Date("2025-03-23"), price: 1.24 },
-    { date: new Date("2025-03-24"), price: 12.25 },
-    { date: new Date("2025-03-25"), price: 0.05 },
-    { date: new Date("2025-03-26"), price: 0.15 },
-    { date: new Date("2025-03-27"), price: 2.35 },
-    { date: new Date("2025-03-28"), price: 40.46 },
-    { date: new Date("2025-03-29"), price: 20.46 },
-    { date: new Date("2025-03-30"), price: 10.46 },
+  let data = [
+    { date: "2025-03-10", price: 0.58 },
+    { date: "2025-03-11", price: 0.93 },
+    { date: "2025-03-12", price: 5.23 },
+    { date: "2025-03-13", price: 4.8 },
+    { date: "2025-03-14", price: 3.2 },
+    { date: "2025-03-15", price: 0.46 },
+    { date: "2025-03-16", price: 1.5 },
+    { date: "2025-03-17", price: 1.67 },
+    { date: "2025-03-18", price: 0.46 },
+    { date: "2025-03-19", price: 0.86 },
+    { date: "2025-03-20", price: 0.12 },
+    { date: "2025-03-21", price: 0.27 },
+    { date: "2025-03-22", price: 0.9 },
+    { date: "2025-03-23", price: 1.24 },
+    { date: "2025-03-24", price: 12.25 },
+    { date: "2025-03-25", price: 0.05 },
+    { date: "2025-03-26", price: 0.15 },
+    { date: "2025-03-27", price: 2.35 },
+    { date: "2025-03-28", price: 40.46 },
+    { date: "2025-03-29", price: 20.46 },
+    { date: "2025-03-30", price: 10.46 },
   ];
 
-  let verticalLine: SVGLineElement | null = null; // Variable to hold the vertical line
-  let chartContainer: HTMLDivElement;
+  let verticalLine = null; // Variable to hold the vertical line
+
+  let chartContainer;
 
   onMount(() => {
     const width = chartContainer.clientWidth; // Use container width for responsiveness
@@ -48,29 +44,29 @@
 
     const parseDate = d3.timeParse("%Y-%m-%d");
     const formatDate = d3.timeFormat("%B %d, %Y"); // Format for the date
-    data = data.map((d) => ({ date: parseDate(d.date.toISOString()), price: d.price }));
+    data = data.map((d) => ({ date: parseDate(d.date), price: d.price }));
 
     const x = d3
       .scaleTime()
-      .domain(d3.extent(data, (d) => d.date) as [Date, Date])
+      .domain(d3.extent(data, (d) => d.date))
       .range([margin.left, width - margin.right]);
 
     const y = d3
       .scaleLinear()
       .domain([
-        d3.min(data, (d) => d.price)! - 10,
-        d3.max(data, (d) => d.price)! + 10,
+        d3.min(data, (d) => d.price) - 10,
+        d3.max(data, (d) => d.price) + 10,
       ])
       .range([height - margin.bottom, margin.top]);
 
     const line = d3
-      .line<DataPoint>()
+      .line()
       .x((d) => x(d.date))
       .y((d) => y(d.price))
       .curve(d3.curveMonotoneX);
 
     const area = d3
-      .area<DataPoint>()
+      .area()
       .x((d) => x(d.date))
       .y0(height - margin.bottom)
       .y1((d) => y(d.price))
@@ -186,7 +182,7 @@
         tooltip.style("display", "none"); // Hide the tooltip
       })
       .on("mousemove", function (event) {
-        const bisect = d3.bisector((d: DataPoint) => d.date).left;
+        const bisect = d3.bisector((d) => d.date).left;
         const x0 = x.invert(d3.pointer(event, this)[0]);
         const i = bisect(data, x0, 1);
         const d0 = data[i - 1];
