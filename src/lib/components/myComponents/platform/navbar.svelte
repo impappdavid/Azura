@@ -10,11 +10,30 @@
 >
     <div class="flex lg:hidden">
         <Sheet.Root>
-            <Sheet.Trigger class="bg-transparent outline-none ">
+            <Sheet.Trigger class="bg-transparent w-full outline-none ">
                 <div
-                    class="text-[10px] sm:text-xs border-2 p-1 px-2 border-zinc-600 text-zinc-400 transition-all ease-in-out duration-300 w-fit max-w-[100px] backdrop-blur-md"
+                    aria-label="about us"
+                    class="text-xs border-2 p-1 px-2 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md"
                 >
-                    OPEN MENU
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-align-left"
+                        ><path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                        /><path d="M4 6l16 0" /><path d="M4 12l10 0" /><path
+                            d="M4 18l14 0"
+                        /></svg
+                    >
                 </div>
             </Sheet.Trigger>
             <Sheet.Content
@@ -82,7 +101,7 @@
             </Sheet.Content>
         </Sheet.Root>
     </div>
-    <div class="flex gap-6 items-center font-body">
+    <div class="hidden lg:flex gap-6 items-center font-body">
         <a href="../../" aria-label="home">
             <img
                 src={icon40}
@@ -95,7 +114,6 @@
             alt="asd"
             class="w-8 h-8 hidden sm:flex animate-[slideinLeft_1s_ease-in-out]"
         />
-        
 
         <div
             class="text-xs border-2 p-1 px-2 text-zinc-400 transition-all ease-in-out duration-300 backdrop-blur-md hidden sm:flex items-center"
@@ -109,13 +127,12 @@
         </div>
     </div>
 
-    <div class="hidden lg:flex w-full max-w-md justify-end gap-8">
+    <div class=" flex w-full justify-end gap-8">
         <div
             class="flex gap-3 items-center font-body animate-[slideinFromTop_3s_ease-in-out]"
         >
-            
             <DropdownMenu.Root>
-                <DropdownMenu.Trigger>
+                <DropdownMenu.Trigger class="outline-none">
                     <div
                         aria-label="about us"
                         class="text-xs border-2 p-1 px-2 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md"
@@ -143,40 +160,20 @@
                         >
                     </div>
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content class="rounded-none bg-zinc-900">
+                <DropdownMenu.Content  class="rounded-none bg-zinc-900">
                     <DropdownMenu.Group class="rounded-none bg-zinc-900">
-                        
-                        <DropdownMenu.Item class="rounded-none bg-zinc-900 cursor-pointer">Disconnect Wallet</DropdownMenu.Item>
-                        <DropdownMenu.Item class="rounded-none bg-zinc-900 text-red-500 hover:text-red-500 cursor-pointer" onclick={() => window.location.href = '/'}>Log out</DropdownMenu.Item>
+                        <DropdownMenu.Item
+                            class="rounded-none bg-zinc-900 cursor-pointer"
+                            >Disconnect Wallet</DropdownMenu.Item
+                        >
+                        <DropdownMenu.Item
+                            class="rounded-none bg-zinc-900 text-red-500 hover:text-red-500 cursor-pointer"
+                            onclick={() => (window.location.href = "/")}
+                            >Log out</DropdownMenu.Item
+                        >
                     </DropdownMenu.Group>
                 </DropdownMenu.Content>
             </DropdownMenu.Root>
-        </div>
-        <div class="lg:hidden flex">
-            <a
-                href="../../platform/asd"
-                aria-label="about us"
-                class="text-xs border-2 p-1 px-2 border-zinc-600 text-zinc-400 hover:border-[#9487e0b2] hover:text-[#ab9ff2] transition-all ease-in-out duration-300 backdrop-blur-md"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-lego"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                        d="M9.5 11l.01 0"
-                    /><path d="M14.5 11l.01 0" /><path
-                        d="M9.5 15a3.5 3.5 0 0 0 5 0"
-                    /><path
-                        d="M7 5h1v-2h8v2h1a3 3 0 0 1 3 3v9a3 3 0 0 1 -3 3v1h-10v-1a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3"
-                    /></svg
-                >
-            </a>
         </div>
     </div>
 </nav>

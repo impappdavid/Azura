@@ -46,12 +46,7 @@
                     >
                         <div class="text-2xl font-bold">NEWS</div>
                     </a>
-                    <a
-                        href="../"
-                        class=" text-white px-3 py-2 font-medium font-body flex justify-between items-center transition-all border-b border-zinc-600/10"
-                    >
-                        <div class="text-2xl font-bold">CONTACT</div>
-                    </a>
+                    
                 </div>
             </Sheet.Content>
         </Sheet.Root>
